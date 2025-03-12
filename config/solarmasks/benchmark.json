@@ -70,9 +70,9 @@
 
         "--cem.scenarios.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.scenarios}}/scenarios.json",
 
-        "--cem.instance.time.start=0",
-        "--cem.instance.time.stop=864000",
-        "--cem.instance.time.step=3600",
+        "--cem.instance.time.start={{parameters.time.start.value}}",
+        "--cem.instance.time.stop={{parameters.time.stop.value}}",
+        "--cem.instance.time.step={{parameters.time.step.value}}",
 
         "--cem.instance.postprocess.export.visualization.enabled=false",
         "--cem.instance.postprocess.export.report.enabled=true",
@@ -109,7 +109,7 @@
     "parameters": [
         {
             "name": "tasks",
-            "sequence":[64,128]
+            "sequence":[128]
         },
         {
             "name":"mesh",
@@ -129,6 +129,10 @@
         {
             "name":"city",
             "sequence":["Paris"]
+        },
+        {
+            "name":"time",
+            "sequence":[{"start":0,"stop":86400,"step":3600,"season":"winter"}]
         }
     ]
 }
