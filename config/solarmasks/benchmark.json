@@ -53,9 +53,9 @@
         "simulators":"kub/simulators",
         "simulators_cfg":"kub/idealHeaters.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
-        "gis":"kub/{{parameters.city.value}}/{{parameters.vegetation.value}}/{{parameters.radius.value}}/gis.json",
-        "mesh":"kub/{{parameters.city.value}}/{{parameters.vegetation.value}}/{{parameters.radius.value}}/{{parameters.mesh.filename.value}}.msh",
-        "weather":"kub/{{parameters.city.value}}/weather.csv",
+        "gis":"kub/{{fixed.city}}/{{parameters.vegetation.value}}/{{fixed.radius}}/gis.json",
+        "mesh":"kub/{{fixed.city}}/{{parameters.vegetation.value}}/{{fixed.radius}}/{{parameters.mesh.filename.value}}.msh",
+        "weather":"kub/{{fixed.city}}/weather.csv",
         "scenarios":"kub/scenarios_local"
     },
     "options": [
@@ -70,9 +70,9 @@
 
         "--cem.scenarios.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.scenarios}}/scenarios.json",
 
-        "--cem.instance.time.start={{parameters.time.start.value}}",
-        "--cem.instance.time.stop={{parameters.time.stop.value}}",
-        "--cem.instance.time.step={{parameters.time.step.value}}",
+        "--cem.instance.time.start={{fixed.time.start}}",
+        "--cem.instance.time.stop={{fixed.time.stop}}",
+        "--cem.instance.time.step={{fixed.time.step}}",
 
         "--cem.instance.postprocess.export.visualization.enabled=false",
         "--cem.instance.postprocess.export.report.enabled=true",
@@ -106,10 +106,15 @@
         "success": ["[ Stopping Feel++ ]"],
         "error": ["Error"]
     },
+    "fixed":{
+        "radius":"2km",
+        "city":"Paris",
+        "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" }
+    },
     "parameters": [
         {
             "name": "tasks",
-            "sequence":[128]
+            "sequence":[64,128,192,256]
         },
         {
             "name":"mesh",
@@ -121,18 +126,6 @@
         {
             "name":"vegetation",
             "sequence":["vegetation","noVegetation"]
-        },
-        {
-            "name":"radius",
-            "sequence":["2km"]
-        },
-        {
-            "name":"city",
-            "sequence":["Paris"]
-        },
-        {
-            "name":"time",
-            "sequence":[{"start":0,"stop":86400,"step":3600,"season":"winter"}]
         }
     ]
 }
