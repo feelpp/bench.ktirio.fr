@@ -1,6 +1,6 @@
 {
     "executable": "feelpp_kub_cem",
-    "output_directory": "{{machine.output_app_dir}}/kub",
+    "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
     "use_case_name": "Paris_Berlin",
     "timeout":"0-00:30:0",
     "resources":{
@@ -84,28 +84,28 @@
         "--cem.instance.solar_shading.enabled=true",
         "--cem.instance.idealflows.enabled=true",
 
-        "--cem.database.directory {{output_directory}}/{{instance}}/{{use_case_name}}",
-        "--directory {{output_directory}}/{{instance}}/{{use_case_name}}"
+        "--cem.database.directory {{output_directory}}",
+        "--directory {{output_directory}}"
     ],
     "additional_files":{
         "custom_logs":[
-            "{{output_directory}}/{{instance}}/{{use_case_name}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO",
-            "{{output_directory}}/{{instance}}/{{use_case_name}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING"
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO",
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING"
         ]
     },
     "scalability": {
-        "directory": "{{output_directory}}/{{instance}}/{{use_case_name}}",
+        "directory": "{{output_directory}}/cem",
         "clean_directory":false,
         "stages": [
             {
                 "name":"",
-                "filepath": "cem/instances/np_{{parameters.tasks.value}}/logs/timers.json",
+                "filepath": "instances/np_{{parameters.tasks.value}}/logs/timers.json",
                 "format": "json",
                 "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
             },
             {
                 "name":"",
-                "filepath": "cem/logs/timers.json",
+                "filepath": "logs/timers.json",
                 "format": "json",
                 "variables_path":["*.timeElapsed.max","*.subtimers.*.subtimers.*.timeElapsed.max"]
             }
