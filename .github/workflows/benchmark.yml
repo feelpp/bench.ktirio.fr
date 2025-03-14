@@ -178,6 +178,8 @@ jobs:
             env:
                 GIRDER_API_KEY: ${{ secrets.GIRDER }}
 
+        -   uses: actions/checkout@v4
+
         -   name: Update Index Date
             run: |
                 sed -i "s/^:docdatetime: .*/:docdatetime: $(date +'%Y-%m-%dT%H:%M:%S')/" "docs/modules/ROOT/pages/index.adoc"
