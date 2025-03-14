@@ -56,7 +56,7 @@ jobs:
             run: |
                 source .venv/bin/activate
                 source ./girder_deploy_config.sh
-                feelpp-girder move -oid $staging_folder_id -nid $production_folder_id
+                feelpp-girder move -oid $staging_folder_id -nid $accepted_folder_id
 
     denied:
         if: github.event.pull_request.merged == false && contains(github.event.pull_request.labels.*.name, 'new-benchmark')
