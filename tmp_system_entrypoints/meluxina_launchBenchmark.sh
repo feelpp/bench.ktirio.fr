@@ -8,8 +8,7 @@ export GIRDER_API_KEY=$GIRDER_API_KEY
 module load Python
 python -m venv .venv
 source .venv/bin/activate
-.venv/bin/python -m pip install --upgrade pip
-.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install feelpp-benchmarking
 
 while getopts "m:b:p:" opt; do
   case $opt in
