@@ -212,7 +212,7 @@ jobs:
                     prudhomm
                     vincentchabannes
                 labels: new-benchmark
-                branch: new-benchmark
+                branch: new-benchmark-${{ github.event.inputs.hpc-systems || github.event.client_payload.hpc-systems }}-${{ steps.gather_arguments.outputs.use_case }}
             env:
                 GITHUB_TOKEN: ${{ secrets.CR_PAT_WORKFLOW }}
 
