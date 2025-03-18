@@ -107,15 +107,14 @@ jobs:
                 echo "$json_machine_config" > machine_config.json
 
         #TODO TEMPORARY TMP_SYSTEM_ENTRYPOINTS
-        -   name: Setup machine and env
-            run: ./tmp_system_entrypoints/${{matrix.machine}}.sh
-            env:
-                PROJECT_ID: ${{matrix.project_id || ''}}
+            # run: 
+            # env:
+            #     PROJECT_ID: ${{matrix.project_id || ''}}
 
         -   name: Execute benchmarks (CLI)
             if: ${{ matrix.submit == 'cli' }}
             run: |
-                source .venv/bin/activate
+                ./tmp_system_entrypoints/${{matrix.machine}}.sh
                 feelpp-benchmarking-exec \
                     -mc machine_config.json \
                     -bc ${{ github.event.inputs.benchmark_config || github.event.client_payload.benchmark_config }} \
@@ -123,6 +122,7 @@ jobs:
                     -v
             env:
                 GIRDER_API_KEY: ${{ secrets.GIRDER }}
+                PROJECT_ID: ${{matrix.project_id || ''}}
 
         #TODO TEMPORARY TMP_SYSTEM_ENTRYPOINTS
         -   name: Execute benchmarks (slurm)
