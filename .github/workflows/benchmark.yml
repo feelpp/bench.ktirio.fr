@@ -115,6 +115,7 @@ jobs:
         -   name: Execute benchmarks (CLI)
             if: ${{ matrix.submit == 'cli' }}
             run: |
+                bash -l
                 source .venv/bin/activate
                 feelpp-benchmarking-exec \
                     -mc machine_config.json \
