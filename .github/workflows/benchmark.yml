@@ -110,7 +110,7 @@ jobs:
         -   name: Execute benchmarks (CLI)
             if: ${{ matrix.submit == 'cli' }}
             run: |
-                ./tmp_system_entrypoints/${{matrix.machine}}.sh
+                ./tmp_system_entrypoints/${{matrix.machine}}.sh && \
                 feelpp-benchmarking-exec \
                     -mc machine_config.json \
                     -bc ${{ github.event.inputs.benchmark_config || github.event.client_payload.benchmark_config }} \
