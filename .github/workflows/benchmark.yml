@@ -125,6 +125,8 @@ jobs:
             env:
                 GIRDER_API_KEY: ${{ secrets.GIRDER }}
                 PROJECT_ID: ${{matrix.project_id || ''}}
+                GHCRIO_USER: ${{ github.actor }}
+                GHCRIO_TOKEN: ${{ secrets.CR_PAT }}
 
         #TODO TEMPORARY TMP_SYSTEM_ENTRYPOINTS
         -   name: Execute benchmarks (slurm)
