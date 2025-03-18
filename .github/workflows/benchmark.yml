@@ -111,6 +111,7 @@ jobs:
             if: ${{ matrix.submit == 'cli' }}
             run: |
                 ./tmp_system_entrypoints/${{matrix.machine}}.sh
+                source .venv/bin/activate
                 feelpp-benchmarking-exec \
                     -mc machine_config.json \
                     -bc ${{ github.event.inputs.benchmark_config || github.event.client_payload.benchmark_config }} \
