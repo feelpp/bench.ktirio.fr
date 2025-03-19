@@ -29,11 +29,6 @@
     "remote_input_dependencies":{
         "vegetation_1km":{"girder":{"folder":"67b7517b4c9ccbdde21a57b2"},"destination":"kub/Paris/vegetation/1km"},
         "vegetation_2km":{"girder":{"folder":"67b7520b4c9ccbdde21a57b7"},"destination":"kub/Paris/vegetation/2km"},
-        // "vegetation_4km":{"girder":{"folder":"67c6cfad4c9ccbdde21a59a4"},"destination":"kub/Paris/vegetation/4km"},
-
-        // "noVegetation_4km":{"girder":{"folder":"67c852594c9ccbdde21a5a36"},"destination":"kub/Paris/vegetation/4km"},
-        // "noVegetation_5km":{"girder":{"folder":"67c8515d4c9ccbdde21a5a2c"},"destination":"kub/Paris/vegetation/5km"},
-        // "noVegetation_10km":{"girder":{"folder":"67c6f35f4c9ccbdde21a59c2"},"destination":"kub/Paris/vegetation/10km"},
 
         "weather":{"girder":{"file":"67b752574c9ccbdde21a57ed"},"destination":"kub/Paris/weather.csv"},
 
@@ -79,8 +74,8 @@
     ],
     "additional_files":{
         "custom_logs":[
-            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO",
-            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING"
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING",
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.WARNING"
         ]
     },
     "scalability": {
@@ -105,7 +100,6 @@
         "success": ["[ Stopping Feel++ ]"],
         "error": ["Error"]
     },
-    //Custom field (fixed)
     "fixed":{
         "vegetation":"vegetation",
         "mesh":{ "filename":"mesh_0_Lod0", "lod":"lod0" },
