@@ -71,6 +71,12 @@
         "--cem.database.directory {{output_directory}}",
         "--directory {{output_directory}}"
     ],
+    "additional_files":{
+        "custom_logs":[
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING",
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.WARNING"
+        ]
+    },
     "scalability": {
         "directory": "{{output_directory}}",
         "clean_directory":true,
