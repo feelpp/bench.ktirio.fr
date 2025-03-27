@@ -28,7 +28,7 @@ jobs:
 
     factory:
         name: HPC Systems Factory
-        runs-on: self-ubuntu-22.04
+        runs-on: self-feelpp
         outputs:
             matrix: ${{ steps.hpc-systems.outputs.matrix }}
         steps:
@@ -37,7 +37,7 @@ jobs:
             id: download_systems_config
             run: |
                 machine_config=$(curl -H 'Authorization: token ${{ secrets.CR_PAT }}' https://raw.githubusercontent.com/feelpp/hpc-systems/refs/heads/main/systems.json)
-                machine_config=$(jq --compact-output '' <<< $machine_config)
+                machine_config=$(jq --compact-output '.' <<< $machine_config)
                 echo "machine_config=$machine_config" >> $GITHUB_OUTPUT
 
         -   name: Filter systems
@@ -50,7 +50,7 @@ jobs:
                     ($valid_systems | split(",")) as $systems |
                     with_entries(select([.key] | inside($systems))) | [.[]]
                 ')
-                filtered_systems_config=$(jq --compact-output '' <<< $filtered_systems_config)
+                filtered_systems_config=$(jq --compact-output '.' <<< $filtered_systems_config)
                 echo "filtered_systems_config=$filtered_systems_config" >> $GITHUB_OUTPUT
 
         -   name: Filter Available Runners
@@ -155,10 +155,10 @@ jobs:
                 path: ${{steps.parse_reports_path.outputs.reports_base_dir}}
 
     deploy:
-        runs-on: self-ubuntu-22.04
+        runs-on: self-feelpp
         needs: [benchmark,factory]
         name: Handle results and trigger rendering
-        if: ${{ github.event.inputs.upload_id == '' && github.event.client_payload.upload_id == '' }}
+        if: always() && ${{ github.event.inputs.upload_id == '' && github.event.client_payload.upload_id == '' }}
         steps:
 
         -   name: Download results
@@ -219,10 +219,10 @@ jobs:
                 GITHUB_TOKEN: ${{ secrets.CR_PAT_WORKFLOW }}
 
     user-results:
-        runs-on: self-ubuntu-22.04
+        runs-on: self-feelpp
         needs: [benchmark,factory]
         name: Deploy the website to a specific folder
-        if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
+        if: always() && ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
         steps:
 
             -   name: Download results
