@@ -222,7 +222,7 @@ jobs:
         runs-on: self-feelpp
         needs: [benchmark,factory]
         name: Deploy the website to a specific folder
-        if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
+        if: always() && ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
         steps:
 
             -   name: Download results
