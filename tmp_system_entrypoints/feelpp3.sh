@@ -1,1 +1,1 @@
-tmp_system_entrypoints/feelpp.sh
+feelpp.sh
