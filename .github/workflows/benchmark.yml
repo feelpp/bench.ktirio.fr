@@ -164,7 +164,7 @@ jobs:
     stage:
         runs-on: self-feelpp
         needs: [benchmark]
-        name: Handle results and trigger rendering
+        name: Stage results
         if: ${{ github.event.inputs.create_pr || github.event.client_payload.create_pr }}
         steps:
         -   uses: actions/checkout@v4
