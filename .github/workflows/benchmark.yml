@@ -270,12 +270,6 @@ jobs:
                     npm install
                     npm run antora
 
-            -   name: Upload artifact
-                uses: actions/upload-artifact@v4
-                with:
-                    name: website
-                    path: ./public/
-
             -   name: Upload to girder
                 if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
                 run: |
@@ -283,3 +277,9 @@ jobs:
                     feelpp-girder upload --item "./public/" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
                 env:
                     GIRDER_API_KEY: ${{secrets.GIRDER}}
+
+            -   name: Upload artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: website
+                    path: ./public/
