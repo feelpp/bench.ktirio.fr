@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/bin/bash
 
 module load env/staging/2024.1
 module load Apptainer/1.3.6-GCCcore-13.3.0

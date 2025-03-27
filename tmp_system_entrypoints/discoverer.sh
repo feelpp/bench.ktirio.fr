@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/bin/bash
 
 echo "================================================"
 sacctmgr show association where account=$PROJECT_ID
