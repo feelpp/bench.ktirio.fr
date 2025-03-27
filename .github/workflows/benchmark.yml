@@ -19,8 +19,15 @@ on:
                 description: 'Path to plots related configuration'
                 required: True
                 default: config/cities/simple_plots.json
+            create_pr:
+                description: 'Create Pull Request'
+                type: boolean
+                default: True
+            create_website:
+                    description: 'Render and compile reports'
+                    type: boolean
             upload_id:
-                description: 'ID to upload the website to'
+                description: 'ID to upload results to'
                 required: False
                 default: ""
 
@@ -154,12 +161,13 @@ jobs:
                 name: benchmark-results-${{matrix.machine}}
                 path: ${{steps.parse_reports_path.outputs.reports_base_dir}}
 
-    deploy:
+    stage:
         runs-on: self-feelpp
-        needs: [benchmark,factory]
-        name: Handle results and trigger rendering
-        if: always() && ${{ github.event.inputs.upload_id == '' && github.event.client_payload.upload_id == '' }}
+        needs: [benchmark]
+        name: Stage results
+        if: ${{ github.event.inputs.create_pr || github.event.client_payload.create_pr }}
         steps:
+        -   uses: actions/checkout@v4
 
         -   name: Download results
             uses: actions/download-artifact@v4
@@ -174,15 +182,21 @@ jobs:
                 source .venv/bin/activate
                 pip3 install feelpp-benchmarking
 
-        -   name: Upload to girder
+        -   name: Upload results to custom girder folder
+            if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
+            run: |
+                source .venv/bin/activate
+                feelpp-girder upload --item "./tmp/results/*" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
+            env:
+                GIRDER_API_KEY: ${{secrets.GIRDER}}
+
+        -   name: Upload to staging folder
             run: |
                 source .venv/bin/activate
                 source ./girder_deploy_config.sh
                 feelpp-girder upload --item "./tmp/results/*" --girder_id $staging_folder_id
             env:
                 GIRDER_API_KEY: ${{ secrets.GIRDER }}
-
-        -   uses: actions/checkout@v4
 
         -   name: Update Index Date
             run: |
@@ -218,12 +232,14 @@ jobs:
             env:
                 GITHUB_TOKEN: ${{ secrets.CR_PAT_WORKFLOW }}
 
-    user-results:
+    website:
         runs-on: self-feelpp
-        needs: [benchmark,factory]
-        name: Deploy the website to a specific folder
-        if: always() && ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
+        needs: [benchmark]
+        name: Render and compile the website
+        if: ${{ github.event.inputs.create_website || github.event.client_payload.create_website }}
         steps:
+
+            -   uses: actions/checkout@v4
 
             -   name: Download results
                 uses: actions/download-artifact@v4
@@ -254,10 +270,16 @@ jobs:
                     npm install
                     npm run antora
 
-            -   name: Upload
+            -   name: Upload artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: website
+                    path: ./public/
+
+            -   name: Upload to girder
+                if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
                 run: |
                     source .venv/bin/activate
-                    feelpp-girder upload --item "./tmp/results/*" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
                     feelpp-girder upload --item "./public/" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
                 env:
                     GIRDER_API_KEY: ${{secrets.GIRDER}}
