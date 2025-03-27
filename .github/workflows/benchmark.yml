@@ -225,6 +225,8 @@ jobs:
         if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
         steps:
 
+            -   uses: actions/checkout@v4
+
             -   name: Download results
                 uses: actions/download-artifact@v4
                 with:
