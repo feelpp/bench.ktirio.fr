@@ -2,9 +2,9 @@
     "executable": "feelpp_kub_cem",
     "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
     "use_case_name": "Berlin_minimal",
-    "timeout":"0-00:30:0",
+    "timeout":"0-00:15:0",
     "resources":{
-        "tasks":"{{parameters.tasks.value}}",
+        "tasks":"{{parameters.resources.tasks.value}}",
         "exclusive_access":true
     },
     "platforms": {
@@ -78,8 +78,8 @@
     ],
     "additional_files":{
         "custom_logs":[
-            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING",
-            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.WARNING"
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.WARNING",
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.WARNING"
         ]
     },
     "scalability": {
@@ -88,7 +88,7 @@
         "stages": [
             {
                 "name":"",
-                "filepath": "cem/instances/np_{{parameters.tasks.value}}/logs/timers.json",
+                "filepath": "cem/instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
                 "format": "json",
                 "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
             },
@@ -111,16 +111,21 @@
     },
     "parameters": [
         {
-            "name":"tasks",
-            "range":{
-                "min":128,
-                "max":1024,
-                "step":128
-            }
+            "name":"resources",
+            "zip":[
+                {
+                    "name":"tasks",
+                    "sequence":[128,256,512,1024,2048,4096,8192]
+                },
+                {
+                    "name":"nodes",
+                    "sequence":[1,2,4,8,16,32,64]
+                }
+            ]
         },
         {
             "name":"radius",
-            "sequence":["1km","2km","3km","4km"]
+            "sequence":["1km","2km","3km","4km","5km"]
         }
     ]
 }
