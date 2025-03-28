@@ -1,7 +1,7 @@
 {
     "executable": "feelpp_kub_cem",
     "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
-    "use_case_name": "Berlin",
+    "use_case_name": "Paris",
     "timeout":"0-00:30:0",
     "resources":{
         "tasks":"{{parameters.tasks.value}}",
@@ -27,11 +27,11 @@
         }
     },
     "remote_input_dependencies":{
-        "1km":{"girder":{"folder":"67b7517f4c9ccbdde21a57b3"},"destination":"kub/Berlin/vegetation/1km"},
-        "2km":{"girder":{"folder":"67b751ee4c9ccbdde21a57b6"},"destination":"kub/Berlin/vegetation/2km"},
-        "4km":{"girder":{"folder":"67d1888fda2d67521b36ad66"},"destination":"kub/Berlin/vegetation/4km"},
+        "1km":{"girder":{"folder":"67b7517b4c9ccbdde21a57b2"},"destination":"kub/Paris/vegetation/1km"},
+        "2km":{"girder":{"folder":"67b7520b4c9ccbdde21a57b7"},"destination":"kub/Paris/vegetation/2km"},
+        "4km":{"girder":{"folder":"67c6cfad4c9ccbdde21a59a4"},"destination":"kub/Paris/vegetation/4km"},
 
-        "weather":{"girder":{"file":"67b7522e4c9ccbdde21a57c9"},"destination":"kub/Berlin/weather.csv"},
+        "weather":{"girder":{"file":"67b752574c9ccbdde21a57ed"},"destination":"kub/Paris/weather.csv"},
 
         "idealHeaters":{"girder":{"file":"67ceb83eda2d67521b36ac88"},"destination":"kub/idealHeaters.cfg"},
         "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
@@ -42,9 +42,9 @@
         "simulators":"kub/simulators",
         "simulators_cfg":"kub/idealHeaters.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
-        "gis":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}/gis.json",
-        "mesh":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}//{{fixed.mesh.filename}}.msh",
-        "weather":"kub/Berlin/weather.csv",
+        "gis":"kub/Paris/{{fixed.vegetation}}/{{parameters.radius.value}}/gis.json",
+        "mesh":"kub/Paris/{{fixed.vegetation}}/{{parameters.radius.value}}//{{fixed.mesh.filename}}.msh",
+        "weather":"kub/Paris/weather.csv",
         "scenarios":"kub/scenarios_local"
     },
     "options": [
@@ -108,7 +108,7 @@
     },
     "parameters": [
         {
-            "name":"tasks",
+            "name": "tasks",
             "sequence":[128,256,512,1024]
         },
         {
