@@ -45,7 +45,7 @@
         "simulators_cfg":"kub/idealHeaters.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
         "gis":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}/gis.json",
-        "mesh":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}//{{fixed.mesh.filename}}.msh",
+        "mesh":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}/{{fixed.mesh.filename}}.msh",
         "weather":"kub/Berlin/weather.csv",
         "scenarios":"kub/scenarios_local"
     },
@@ -111,11 +111,15 @@
     "parameters": [
         {
             "name":"tasks",
-            "sequence":[32,64,128,256]
+            "range":{
+                "min":128,
+                "max":1024,
+                "step":128
+            }
         },
         {
             "name":"radius",
-            "sequence":["1km","2km","4km","5km"]
+            "sequence":["1km","2km","4km","5km","10km"]
         }
     ]
 }
