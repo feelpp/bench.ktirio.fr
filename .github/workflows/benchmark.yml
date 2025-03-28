@@ -182,15 +182,6 @@ jobs:
                 source .venv/bin/activate
                 pip3 install feelpp-benchmarking
 
-        -   name: Upload results to custom girder folder
-            if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
-            run: |
-                source .venv/bin/activate
-                zip -r reports.zip ./tmp/results/*
-                feelpp-girder upload --item "reports.zip" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
-            env:
-                GIRDER_API_KEY: ${{secrets.GIRDER}}
-
         -   name: Upload to staging folder
             run: |
                 source .venv/bin/activate
@@ -233,10 +224,10 @@ jobs:
             env:
                 GITHUB_TOKEN: ${{ secrets.CR_PAT_WORKFLOW }}
 
-    website:
+    export_results:
         runs-on: self-feelpp
         needs: [benchmark]
-        name: Render and compile the website
+        name: Export website and reports
         if: ${{ github.event.inputs.create_website == 'true' || github.event.client_payload.create_website == 'true' }}
         steps:
 
@@ -271,19 +262,24 @@ jobs:
                     npm install
                     npm run antora
 
-            -   name: Zip website
-                run: zip -r dashboard.zip public/
+            -   name: Zip website and reports
+                run: |
+                    zip -r dashboard.zip public/
+                    zip -r reports.zip ./tmp/results/*
 
             -   name: Upload to girder
                 if: ${{ github.event.inputs.upload_id != '' || github.event.client_payload.upload_id != '' }}
                 run: |
                     source .venv/bin/activate
                     feelpp-girder upload --item "dashboard.zip" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
+                    feelpp-girder upload --item "reports.zip" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
                 env:
                     GIRDER_API_KEY: ${{secrets.GIRDER}}
 
             -   name: Upload artifact
                 uses: actions/upload-artifact@v4
                 with:
-                    name: website
-                    path: dashboard.zip
+                    name: reports
+                    path: |
+                        reports.zip
+                        dashboard.zip
