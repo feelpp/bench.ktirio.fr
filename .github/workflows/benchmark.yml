@@ -187,7 +187,7 @@ jobs:
             run: |
                 source .venv/bin/activate
                 zip -r reports.zip ./tmp/results/*
-                feelpp-girder upload --item "./tmp/results/*" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
+                feelpp-girder upload --item "reports.zip" --girder_id ${{ github.event.inputs.upload_id || github.event.client_payload.upload_id}}
             env:
                 GIRDER_API_KEY: ${{secrets.GIRDER}}
 
