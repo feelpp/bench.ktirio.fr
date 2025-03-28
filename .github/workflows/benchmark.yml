@@ -165,7 +165,7 @@ jobs:
         runs-on: self-feelpp
         needs: [benchmark]
         name: Stage results
-        if: ${{ github.event.inputs.create_pr || github.event.client_payload.create_pr }}
+        if: ${{ github.event.inputs.create_pr == 'true' || github.event.client_payload.create_pr == 'true' }}
         steps:
         -   uses: actions/checkout@v4
 
@@ -237,7 +237,7 @@ jobs:
         runs-on: self-feelpp
         needs: [benchmark]
         name: Render and compile the website
-        if: ${{ github.event.inputs.create_website || github.event.client_payload.create_website }}
+        if: ${{ github.event.inputs.create_website == 'true' || github.event.client_payload.create_website == 'true' }}
         steps:
 
             -   uses: actions/checkout@v4
