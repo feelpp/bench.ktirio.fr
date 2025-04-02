@@ -29,14 +29,14 @@
     "remote_input_dependencies":{
         "weather":{"girder":{"file":"67b752574c9ccbdde21a57ed"},"destination":"kub/Paris/weather.csv"},
 
-        "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub/simulatorCfgs"},
+        "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub"},
         "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
         "simulators":{"girder":{"item":"67cec10fda2d67521b36acc7"},"destination":"kub/"},
         "scenarios":{"girder":{"item":"67b496894c9ccbdde21a5769"},"destination":"kub/"}
     },
     "input_file_dependencies":{
         "simulators":"kub/simulators",
-        "simulators_cfg":"kub/simulatorCfgs/{{fixed.simulator}}.cfg",
+        "simulators_cfg":"kub/{{fixed.simulator}}.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
         "partitioned_mesh":"kub_benchmark/{{parameters.radius.value}}/preprocessing/partitioning/np_{{parameters.resources.tasks.value}}",
         "dataregistry_json":"kub_benchmark/{{parameters.radius.value}}/preprocessing/.dataregistry.json",
