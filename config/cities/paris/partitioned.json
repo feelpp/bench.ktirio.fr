@@ -5,6 +5,7 @@
     "timeout":"0-00:30:0",
     "resources":{
         "tasks":"{{parameters.resources.tasks.value}}",
+        "memory":"{{parameters.memory.value}}",
         "exclusive_access":true
     },
     "platforms": {
@@ -104,7 +105,7 @@
     },
     "fixed":{
         "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" },
-        "simulator":"boilers"
+        "simulator":"idealHeaters"
     },
     "parameters": [
         {
@@ -112,17 +113,25 @@
             "zip":[
                 {
                     "name":"tasks",
-                    "sequence":[256,384,512,640,768,896,1024]
+                    "sequence":[256,384,512,640,768,896,1024,1152,1280,2560,3840,5120,6400]
                 },
                 {
                     "name":"nodes",
-                    "sequence":[2,3,4,5,6,7,8,9,10]
+                    "sequence":[2,3,4,5,6,7,8,9,10,20,30,40,50]
                 }
             ]
         },
         {
             "name":"radius",
-            "sequence":["1km","2km","3km"]
+            "sequence":["1km","2km","3km","4km","5km"]
+        },
+        {
+            "name":"memory",
+            "sequence": [100,300],
+            "conditions":{
+                "100":[{"radius":["1km","2km","3km"]}],
+                "300":[{"radius":["4km","5km"]}]
+            }
         }
     ]
 }
