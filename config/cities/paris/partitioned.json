@@ -10,8 +10,7 @@
     "platforms": {
         "apptainer":{
             "image": {
-                "url":"oras://ghcr.io/feelpp/ktirio-urban-building:feature-cem_partitioning-sif",
-                "filepath":"{{machine.containers.apptainer.image_base_dir}}/kub.sif"
+                "filepath":"{{machine.containers.apptainer.image_base_dir}}/kub_feature-cem_partitioning-sif"
             },
             "input_dir":"/input_data",
             "options": [
@@ -38,8 +37,9 @@
         "simulators":"kub/simulators",
         "simulators_cfg":"kub/idealHeaters.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
-        "dataregistry_directory":"kub/{{parameters.radius.value}}/preprocessing",
-        "partitioned_mesh":"{{input_file_dependencies.dataregistry_directory}}/partitioning/np_{{parameters.resources.tasks.value}}",
+        "partitioned_mesh":"kub_benchmark/{{parameters.radius.value}}/preprocessing/partitioning/np_{{parameters.resources.tasks.value}}",
+        "dataregistry_json":"kub_benchmark/{{parameters.radius.value}}/preprocessing/.dataregistry.json",
+        "preprocessing_json":"kub_benchmark/{{parameters.radius.value}}/preprocessing/preprocessing.json",
         "weather":"kub/Paris/weather.csv",
         "scenarios":"kub/scenarios_local"
     },
@@ -48,7 +48,7 @@
         "--cem.simulator.sun.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.sun_fmu}}",
         "--cem.simulator.lod0.modelisation.maxfloors=10",
 
-        "--cem.preprocessing.dataregistry.directory={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.dataregistry_directory}}",
+        "--cem.preprocessing.dataregistry.directory={{platforms.{{machine.platform}}.input_dir}}/kub_benchmark/{{parameters.radius.value}}/preprocessing",
 
         "--cem.weather.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.weather}}",
         "--cem.scenarios.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.scenarios}}/scenarios.json",
@@ -76,7 +76,7 @@
     },
     "scalability": {
         "directory": "{{output_directory}}",
-        "clean_directory":false,
+        "clean_directory":true,
         "stages": [
             {
                 "name":"",
@@ -115,7 +115,7 @@
         },
         {
             "name":"radius",
-            "sequence":["1km","2km","3km"]
+            "sequence":["3km"]
         }
     ]
 }
