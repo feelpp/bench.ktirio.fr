@@ -28,14 +28,14 @@
     "remote_input_dependencies":{
         "weather":{"girder":{"file":"67b752574c9ccbdde21a57ed"},"destination":"kub/Paris/weather.csv"},
 
-        "idealHeaters":{"girder":{"file":"67ceb83eda2d67521b36ac88"},"destination":"kub/idealHeaters.cfg"},
+        "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub/simulatorCfgs"},
         "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
         "simulators":{"girder":{"item":"67cec10fda2d67521b36acc7"},"destination":"kub/"},
         "scenarios":{"girder":{"item":"67b496894c9ccbdde21a5769"},"destination":"kub/"}
     },
     "input_file_dependencies":{
         "simulators":"kub/simulators",
-        "simulators_cfg":"kub/idealHeaters.cfg",
+        "simulators_cfg":"kub/simulatorCfgs/{{fixed.simulator}}.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
         "partitioned_mesh":"kub_benchmark/{{parameters.radius.value}}/preprocessing/partitioning/np_{{parameters.resources.tasks.value}}",
         "dataregistry_json":"kub_benchmark/{{parameters.radius.value}}/preprocessing/.dataregistry.json",
@@ -97,7 +97,8 @@
         "error": ["Error"]
     },
     "fixed":{
-        "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" }
+        "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" },
+        "simulator":"boilers"
     },
     "parameters": [
         {
