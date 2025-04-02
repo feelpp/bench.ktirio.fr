@@ -86,6 +86,12 @@
                 "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
             },
             {
+                "name":"Mean",
+                "filepath": "instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
+                "format": "json",
+                "variables_path":["execute.subtimers.*.statistics.iterMean.mean","execute.subtimers.*.subtimers.*.statistics.*.*"]
+            },
+            {
                 "name":"",
                 "filepath": "log/timers.json",
                 "format": "json",
@@ -107,7 +113,7 @@
             "zip":[
                 {
                     "name":"tasks",
-                    "sequence":[256,384,512,640,768,896,1024,1152,1280,2560,3840,5120,6400]
+                    "sequence":[128]
                 },
                 {
                     "name":"nodes",
@@ -117,7 +123,7 @@
         },
         {
             "name":"radius",
-            "sequence":["1km","2km","3km","4km"]
+            "sequence":["1km"]
         },
         {
             "name":"memory",
