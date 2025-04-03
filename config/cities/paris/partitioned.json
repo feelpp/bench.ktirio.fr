@@ -107,7 +107,7 @@
     "fixed":{
         "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" },
         "simulator":"idealHeaters",
-        "quad_order":1
+        "quad_order":3
     },
     "parameters": [
         {
@@ -125,14 +125,16 @@
         },
         {
             "name":"radius",
-            "sequence":["1km","2km","3km","4km","5km"]
+            "sequence":["1km","2km","3km","4km","5km","6km"]
         },
         {
             "name":"memory",
-            "sequence": [100,300],
+            "sequence": [100,300,600,1200],
             "conditions":{
                 "100":[{"radius":["1km","2km","3km"]}],
-                "300":[{"radius":["4km","5km"]}]
+                "300":[{"radius":["4km"]}],
+                "600":[{"radius":["5km"]}],
+                "1200":[{"radius":["6km"]}]
             }
         }
     ]
