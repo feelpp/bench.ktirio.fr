@@ -1,7 +1,7 @@
 {
     "executable": "feelpp_kub_cem",
     "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
-    "use_case_name": "Paris_partitioned",
+    "use_case_name": "SM_Quadrature_Order",
     "timeout":"0-00:15:0",
     "resources":{
         "tasks":"{{variables.tasks}}",
@@ -67,7 +67,7 @@
 
         "--cem.database.directory {{output_directory}}",
         "--directory {{output_directory}}",
-        "--cem.instance.solar_shading.ray-tracing.quad-order {{parameters.quad_order.value}}"
+        "--cem.instance.solar_shading.ray-tracing.quad-order {{parameters.quad_ord.value}}"
     ],
     "additional_files":{
         "custom_logs":[
@@ -118,8 +118,8 @@
         {
             "name":"quad_ord",
             "range":{
-                "start":0,
-                "stop":5,
+                "min":0,
+                "max":5,
                 "step":1
             }
         }
