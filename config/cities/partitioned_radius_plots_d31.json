@@ -14,7 +14,7 @@
         "title": "Application - Relative performance",
         "plot_types": [ "stacked_bar","grouped_bar"],
         "transformation": "relative_performance",
-        "variables": [ "updateForUse", "simulation", "postprocess" ],
+        "variables": [ "updateForUse", "simulation.buildingExecuteStep", "postprocess" ],
         "names":["pre-proc","simulation","post-proc"],
         "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
         "secondary_axis": {"parameter":"radius", "label":"Radius"},
@@ -25,7 +25,7 @@
         "title": "Application - speedup",
         "plot_types": [ "scatter" ],
         "transformation": "speedup",
-        "variables": [ "updateForUse", "simulation", "postprocess" ],
+        "variables": [ "updateForUse", "simulation.buildingExecuteStep", "postprocess" ],
         "names":["pre-proc","simulation","post-proc"],
         "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
         "secondary_axis": {"parameter":"radius", "label":"Radius"},
@@ -43,16 +43,6 @@
         "color_axis": { "parameter": "radius", "label": "Radius" }
     },
     {
-        "title": "Simulation - Relative performance",
-        "plot_types": [ "stacked_bar","grouped_bar"],
-        "transformation": "relative_performance",
-        "variables": [ "simulation.buildingExecuteStep"],
-        "names": ["buildingExecuteStep"],
-        "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
-        "yaxis": { "label": "%"},
-        "color_axis": { "parameter": "radius", "label": "Radius" }
-    },
-    {
         "title": "Simulation - Speedup",
         "plot_types": [ "scatter" ],
         "transformation": "speedup",
@@ -64,7 +54,7 @@
     },
     {
         "title": "Simulation Iteration Statistics",
-        "plot_types": [ "scatter"],
+        "plot_types": [ "scatter","marked_scatter"],
         "transformation": "performance",
         "variables": [ "Statistics_simulation.buildingExecuteStep.iterMax.max","Statistics_simulation.buildingExecuteStep.iterMean.mean","Statistics_simulation.buildingExecuteStep.iterMin.min"],
         "names": ["Max","Avg","Min"],
@@ -80,9 +70,8 @@
         "variables": [ "Statistics_simulation.buildingExecuteStep.iterMean.mean"],
         "names": ["Avg"],
         "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
-        "secondary_axis": {"parameter":"radius", "label":"Radius"},
         "yaxis": { "label": "speedup"},
-        "color_axis": { "parameter": "performance_variable", "label": "Average" }
+        "color_axis": { "parameter": "radius", "label": "Radius" }
     },
     {
         "title": "Postprocess",
@@ -92,26 +81,6 @@
         "names": ["post-proc"],
         "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
         "yaxis": { "label": "execution time (s)"},
-        "color_axis": { "parameter": "radius", "label": "Radius" }
-    },
-    {
-        "title": "Postprocess - Relative performance",
-        "plot_types": [ "stacked_bar","grouped_bar"],
-        "transformation": "relative_performance",
-        "variables": [ "postprocess.exportOutputs" ],
-        "names": ["post-proc"],
-        "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
-        "yaxis": { "label": "%"},
-        "color_axis": { "parameter": "radius", "label": "Radius" }
-    },
-    {
-        "title": "Postprocess - Speedup",
-        "plot_types": [ "scatter" ],
-        "transformation": "speedup",
-        "variables": [ "postprocess.exportOutputs" ],
-        "names": ["post-proc"],
-        "xaxis": { "parameter": "resources.nodes", "label": "Number of nodes" },
-        "yaxis": { "label": "speedup"},
         "color_axis": { "parameter": "radius", "label": "Radius" }
     }
 ]}
