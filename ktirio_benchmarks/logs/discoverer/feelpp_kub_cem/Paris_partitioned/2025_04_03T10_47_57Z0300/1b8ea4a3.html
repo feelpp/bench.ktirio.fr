@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ReFrame logs :: Ktirio Benchmarks</title>
+    <link rel="canonical" href="https://feelpp.github.io/bench.ktirio.fr/ktirio_benchmarks/logs/discoverer/feelpp_kub_cem/Paris_partitioned/2025_04_03T10_47_57Z0300/1b8ea4a3.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../../_/css/site.css">
+<link rel="icon" href="../../../../../../_/img/favicon.ico" type="image/x-icon">
+<script>!function(l,p){if(l.protocol!==p&&l.host=="docs.antora.org"){l.protocol=p}else if(/\.gitlab\.io$/.test(l.host)){l.replace(p+"//docs.antora.org"+l.pathname.substr(l.pathname.indexOf("/",1))+l.search+l.hash)}}(location,"https:")</script>
+
+<script src="../../../../../../_/js/vendor/tabs-block-extension.js"></script>
+<script src="../../../../../../_/js/vendor/tabs-block-behavior.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+
+  TeX: {
+      Macros: {
+      bold: ["{\\bf #1}",1],
+      calTh: "{\\mathcal{T}_h}",
+      card: ["{\\operatorname{card}(#1)}",1],
+      card: ["{\\operatorname{card}(#1)}",1],
+      Ck: ["{\\mathcal{C}^{#1}}",1],
+      deformt: ["{\\mathbf{\\varepsilon(#1)}}",1],
+      diam: "{\\operatorname{diam}}",
+      dim: ["{\\operatorname{dim}(#1)}",1],
+      disp: ["{\\mathbf{#1}}",1],
+      domain: "{\\Omega}",
+      ds: "",
+      essinf: "{\\operatorname{ess}\\, \\operatorname{inf}}",
+      F:"{\\mathcal{F}}",
+      geo: "{\\mathrm{geo}}",
+      Ich: ["{\\mathcal{I}^{#1}_{c,h}#2}",2],
+      Id: "{\\mathcal{I}}",
+      Ilag: ["{\\mathcal{I}^{\\mathrm{lag}}_{#1}}",1],
+      jump: ["{[\\![ #1 ]\\!]}",1],
+      n:"{\\mathbf{n}}",
+      Ne: "{N_{\\mathrm{e}}}",
+      Next: "{\\mathrm{n}}",
+      nf: "{n_f}",
+      ngeo: "{n_{\\mathrm{geo}}}",
+      Nma: "{N_{\\mathrm{ma}}}",
+      NN: "{\\mathbb N}",
+      Nno: "{N_{\\mathrm{no}}}",
+      Nso: "{N_{\\mathrm{so}}}",
+      opdim: "{\\operatorname{dim}}",
+      p: "{\\mathrm{p}}",
+      P:"{\\mathcal{P}}",
+      Pch: ["{P^{#1}_{c,h}}",1],
+      Pcho: ["{P^{#1}_{c,h,0}}",1],
+      Pk: ["{\\mathcal{P}^{#1}}",1],
+      poly: ["{\\mathbb{#1}",1],
+      poly: ["{\\mathbb{#1}}",1],
+      prect: ["{\\left\\(#1\\right\\)}",1],
+      q:"{\\mathbf{q}}",
+      Qch: ["{Q^{#1}_{c,h}}",1],
+      Qk: ["{\\mathcal{Q}^{#1}}",1],
+      R: ["{\\mathbb{R}^{#1}}",1],
+      RR: "{\\mathbb R}",
+      set: ["{\\left\\{#1\\right\\}}",1],
+      stresst: ["{\\mathbf{\\sigma(#1)}}",1],
+      T:"{\\mathcal{T}}",
+      tr: "{\\operatorname{tr}}",
+      v:"{\\mathbf{v}}",
+      vertiii: ["\\left\\vert\\kern-0.25ex\\left\\vert\\kern-0.25ex\\left\\vert #1 \\right\\vert\\kern-0.25ex\\right\\vert\\kern-0.25ex\\right\\vert",1]
+  },
+  extensions: ["mhchem.js"] 
+  }
+});
+</script>
+<!--<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML'></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>-->
+
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>-->
+<script>var uiRootPath = '../../../../../../_'</script>
+
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-template-project" style="border-top: 4px solid #9E9E9E">
+        <div class="navbar-brand">
+            <div class="navbar-item feelpp-logo">
+            <a href="https://hidalgo2.eu"><img class="cemosis-logo" src="../../../../../../_/img/logo-hidalgo2-color.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://eurohpc-ju.europa.eu/"><img class="cemosis-logo" src="../../../../../../_/img/logo-eurohpc-ju.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://numpex.org/"><img class="cemosis-logo" src="../../../../../../_/img/logo-numpex.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.economie.gouv.fr/france-2030"><img class="cemosis-logo" src="../../../../../../_/img/logo-france-2030.jpg" alt="Ktirio Benchmarks"></a>
+            </div>  
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="https://docs.feelpp.org/">Documentation Reference</a>
+                </div>
+                <div class="navbar-item">
+                    <a class="navbar-brand"  href="https://www.cemosis.fr">
+                        <a href="https://feelpp.github.io/bench.ktirio.fr"><img class="cemosis-logo" src="../../../../../../_/img/logo-unistra.svg"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://feelpp.github.io/bench.ktirio.fr"><img class="cemosis-logo" src="../../../../../../_/img/logo-cnrs.svg"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="cemosis-logo"  src="../../../../../../_/img/cemosis-logo.svg" alt="Cemosis logo"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<a href="#" class="menu-expand-toggle"></a>
+<div class="nav-container" data-component="ktirio_benchmarks" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../../../index.html">Ktirio Benchmarks</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../../index.html">Ktirio Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../../about.html">About</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Ktirio Benchmarks</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+      <li class="component is-current">
+        <a class="title" href="../../../../../index.html">Ktirio Benchmarks</a>
+      </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+    <a href="../../../../../index.html" class="home-link"></a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../../../index.html">Ktirio Benchmarks</a></li>
+    <li><a href="1b8ea4a3.html">ReFrame logs</a></li>
+  </ul>
+</nav>
+
+  
+    <div class="edit-this-page"><a href="https://github.com/feelpp/bench.ktirio.fr/edit/HEAD/docs/modules/ROOT/pages/logs/discoverer/feelpp_kub_cem/Paris_partitioned/2025_04_03T10_47_57Z0300/1b8ea4a3.adoc">Edit this Page</a></div>
+  
+  <div class="page-downloads">
+  <span class="label">Download as</span>
+  <ul class="download-options">
+    <li>
+      <a onclick="print(this)" href="#" data-toggle="tooltip" data-placement="left" title="Print to PDF"
+         class="pdf-download">
+        <img class="pdf-file-icon icon" src="../../../../../../_/img/pdf.svg"/> .pdf
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">ReFrame logs</h1>
+<div class="sect1">
+<h2 id="_reframe_scheduler_script"><a class="anchor" href="#_reframe_scheduler_script"></a>1. ReFrame scheduler script</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+#SBATCH --job-name="rfm_RegressionTest_1b8ea4a3"
+#SBATCH --ntasks=512
+#SBATCH --ntasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --output=rfm_job.out
+#SBATCH --error=rfm_job.err
+#SBATCH --exclusive
+#SBATCH --partition=cn
+#SBATCH --account=ehpc-dev-2024d05-047
+#SBATCH --qos=ehpc-dev-2024d05-047
+#SBATCH --threads-per-core=1
+#SBATCH --time=0-00:30:0
+source /etc/profile.d/modules.sh
+export MODULEPATH=/opt/software/modulefiles:$MODULEPATH
+module load openmpi/4/gcc/latest
+srun singularity exec -B"/discofs/ehpc-dev-2024d05-047/vchabannes/tmp_reframe/stage/discoverer/cn/default/RegressionTest_1b8ea4a3:/rfm_workdir" --home /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home --bind /disco2fs/ehpc-dev-2024d05-047/vchabannes/inputdataset/1b8ea4a3:/input_data --env OMP_NUM_THREADS=1 /home/vchabannes/discofs_project/vchabannes/images_sif/kub_feature-cem_partitioning-sif feelpp_kub_cem --config-files /input_data/kub/idealHeaters.cfg --cem.simulator.sun.filename=/input_data/kub/simulators/Sun.fmu --cem.simulator.lod0.modelisation.maxfloors=10 --cem.preprocessing.dataregistry.directory=/input_data/kub_benchmark/2km/preprocessing --cem.weather.filename=/input_data/kub/Paris/weather.csv --cem.scenarios.filename=/input_data/kub/scenarios_local/scenarios.json --cem.instance.time.start=0 --cem.instance.time.stop=86400 --cem.instance.time.step=3600 --cem.instance.postprocess.export.visualization.enabled=true --cem.instance.postprocess.export.report.enabled=true --cem.instance.postprocess.export.outputs.csv.enabled=false --cem.instance.postprocess.export.outputs.enabled=true --cem.instance.solar_shading.enabled=true --cem.instance.idealflows.enabled=true --cem.database.directory /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned --directory /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned --cem.instance.solar_shading.ray-tracing.quad-order 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reframe_error_log"><a class="anchor" href="#_reframe_error_log"></a>2. ReFrame error log</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">slurmstepd: error: Unable to get current working directory: No such file or directory
+Loading openmpi/4/gcc/latest
+  Loading requirement: ucx/1/latest libfabric/1/latest
+slurmstepd: error: Unable to get current working directory: No such file or directory
+[cn0577:124529] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124535] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124567] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124714] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124525] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124523] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124615] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124539] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124691] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124704] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124569] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124531] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124530] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124533] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124587] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124665] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124526] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124534] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124661] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124672] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124522] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124630] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124660] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124593] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193888] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193791] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193764] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193849] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193776] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193890] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193775] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193827] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193848] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193765] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193770] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193807] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193874] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193889] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193777] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193761] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193768] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193853] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193852] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193831] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193787] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193771] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193766] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193788] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193778] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193763] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124621] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124538] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124553] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124599] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124604] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124584] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124550] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826561] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826614] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826578] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826581] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826560] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826563] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826566] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826570] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826574] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826567] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826582] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826592] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826568] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826562] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826565] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826564] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826596] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826577] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826575] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826569] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826623] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826605] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826595] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826600] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124575] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124607] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826698] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124592] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124720] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826676] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124727] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826616] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826673] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193860] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568392] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568416] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568394] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568435] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568447] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568480] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568402] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568488] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568412] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568399] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568422] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568502] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568407] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568421] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568444] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568468] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568495] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568398] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568420] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568391] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568481] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568390] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568406] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568433] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124739] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124666] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568472] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826689] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568529] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124655] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124684] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826695] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826706] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124536] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193840] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568471] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124673] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193866] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193865] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826709] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568459] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568489] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124711] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124632] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568458] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124590] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193862] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826617] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826585] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124707] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124625] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124732] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826607] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193803] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568425] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193782] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568483] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124571] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124676] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124718] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124611] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568463] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193892] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193842] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826697] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124690] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826639] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568497] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193813] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826630] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124681] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193798] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193793] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826693] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124572] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568396] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124602] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826615] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124669] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826626] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568457] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193769] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124603] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124721] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568423] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124662] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826620] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826687] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124671] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568474] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124730] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124606] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193810] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124675] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193816] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568448] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124634] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193792] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124652] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568473] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826656] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568442] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124701] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124598] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193878] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826678] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193781] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826682] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124667] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568490] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568419] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124645] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826597] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568486] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124644] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124549] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124637] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124656] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124612] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124618] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193815] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568438] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193829] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826612] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124631] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826685] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124638] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124696] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124736] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193809] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193811] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826629] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124668] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124642] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826627] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568479] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193855] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826588] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124608] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124568] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193767] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568514] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124643] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124600] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568426] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124715] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124709] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124594] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124703] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193796] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124705] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124702] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124692] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826624] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826606] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568446] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193841] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124723] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124591] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826648] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124700] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124728] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124654] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568509] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193886] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826640] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124674] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193851] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124733] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124640] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124601] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124713] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124693] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124689] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193772] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124688] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826683] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193806] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568499] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568403] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826631] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568501] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826670] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826601] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193825] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124724] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124679] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193845] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124595] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124719] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124596] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124683] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826632] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124576] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124609] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124613] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124658] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826686] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124699] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124664] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124633] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124614] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124559] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124527] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124616] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124680] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124650] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193873] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124737] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826598] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568491] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568452] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826580] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193814] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124663] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568477] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826667] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826647] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193817] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826645] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0577:124716] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193812] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193858] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193819] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193857] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826635] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826591] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568512] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568439] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826653] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568494] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568523] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193867] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826650] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826641] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826646] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193808] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826674] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568475] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826622] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193856] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568503] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568515] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568467] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193884] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193824] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193786] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826628] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568450] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826604] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193800] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826594] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568470] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826651] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826657] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826705] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568518] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193875] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826675] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568513] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193850] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826662] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568492] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826665] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193879] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193891] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826672] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568511] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193828] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568411] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193844] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193838] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568395] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193836] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826643] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568522] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568451] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193797] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826576] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826637] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193820] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568527] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826664] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193789] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568461] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826609] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193847] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193863] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193832] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193881] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826704] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568428] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568519] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826666] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193887] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826658] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826654] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826590] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826583] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568517] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193801] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568521] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193780] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826694] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568445] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826703] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568441] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826690] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826701] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568462] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193872] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826702] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568466] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826696] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193893] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193830] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193833] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826700] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826584] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193835] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568496] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193784] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826608] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568427] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568506] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826680] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826599] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826652] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568401] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193790] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826677] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193822] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568500] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568443] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568524] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568454] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826611] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826610] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826621] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193882] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568478] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826602] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826587] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826636] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193876] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568430] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568417] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826684] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568415] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193877] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193854] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193843] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193871] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193861] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826661] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826699] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193826] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826688] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193834] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193802] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826625] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826660] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193805] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826691] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568414] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568413] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568437] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568436] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826671] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193870] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826644] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568507] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193839] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193794] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826692] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826707] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193859] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826638] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193799] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568516] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568397] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193774] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0579:3826633] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193869] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568526] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568440] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568498] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193818] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193885] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193880] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193837] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568465] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193779] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568429] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568525] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568456] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193846] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193804] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193868] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568410] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193785] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568400] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568508] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568487] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193883] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568469] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193823] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568464] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568409] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568408] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0580:4193864] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568510] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568528] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568424] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568449] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568418] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568405] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568484] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568404] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568434] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn0578:3568453] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reframe_output_log"><a class="anchor" href="#_reframe_output_log"></a>3. ReFrame output log</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Reading /input_data/kub/idealHeaters.cfg...
+[ Starting Feel++ ] application City_Energy_Modeling version 0.111.0-preview.120 date 2025-Apr-03
+[feelpp] create Feel++ root repository: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned
+
+[feelpp] create Feel++ geo repository: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/geo
+
+[feelpp] create Feel++ results directory: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512
+
+[feelpp] create Feel++ expressions directory: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/exprs
+
+[feelpp] create Feel++ logs directory: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/logs
+
+ . City_Energy_Modeling files are stored in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512
+ .. logfiles :/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/logs
+[ KUB ] application City_Energy_modeling version 0.5.0
+[CityEnergyModelload] constructor start ...
+[CityEnergyModelload] constructor current done in 0.113594 s
+[CityEnergyModelload] updateForUse start ...
+[CityEnergyModelload] preprocessing start ...
+[CityEnergyModelload] updatePreprocessingForUse start ...
+[CityEnergyModelload] updatePreprocessingForUse current done in 0.0426228 s
+[CityEnergyModelload] preprocessing current done in 0.0534273 s
+[CityEnergyModelload] importPreprocessing start ...
+[loadMesh] Loading mesh in format json+h5: "/input_data/kub_benchmark/2km/preprocessing/partitioning/np_512/mesh.lod0.json"
+[CityEnergyModelload] importPreprocessing current done in 2.57736 s
+[CityEnergyModelload] scenarios start ...
+[CityEnergyModelload] scenarios current done in 0.204203 s
+[CityEnergyModelload] weather start ...
+[CityEnergyModelload] weather current done in 0.0829356 s
+[CityEnergyModelload] sunModel start ...
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_sun exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/sun.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_sun
+[CityEnergyModelload] sunModel current done in 0.077186 s
+[CityEnergyModelload] initBuildingModels start ...
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor0 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor0.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor0
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor1 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor1.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor1
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor2 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor2.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor2
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor3 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor3.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor3
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor4 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor4.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor4
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor5 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor5.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor5
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor6 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor6.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor6
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor7 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor7.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor7
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor8 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor8.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor8
+checking if fmu tmp path /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor9 exists: false
+unzipping /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/simulators/lod0.buildingfloor9.fmu in /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor9
+[CityEnergyModelload] initBuildingModels current done in 3.81056 s
+[CityEnergyModelload] updateForUse current done in 6.80596 s
+[SunModel::SunInstance] creating sun new instance
+[CityEnergyModel::Instance]
+  |-- export outputs enabled: 1
+  |-- export visualization enabled: 1
+  |-- export report enabled: 1
+  |-- export building report enabled: 0
+  |-- solar shading coefficients enabled: building
+  |-- solar shading components: building
+[CityEnergyModelInstance] execute start ...
+execute at time=3600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 0.00308005 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000787366 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00396638 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.09e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00812189 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 8.60711 s
+[CityEnergyModelInstance] execute.simulation current done in 8.6157 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.71264 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.117555 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.49172 s
+[CityEnergyModelInstance] execute.postprocess current done in 3.32477 s
+execute at time=7200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000836127 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00351096 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 6.5e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00450553 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.227224 s
+[CityEnergyModelInstance] execute.simulation current done in 0.232216 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.349808 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.123706 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.18616 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.6629 s
+execute at time=10800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000909838 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.0037737 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 5.8e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00483425 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.167731 s
+[CityEnergyModelInstance] execute.simulation current done in 0.173013 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0743965 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.126534 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.23128 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.43537 s
+execute at time=14400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.5e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000823417 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00367519 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 6.4e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00466158 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.14263 s
+[CityEnergyModelInstance] execute.simulation current done in 0.147776 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0701711 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.148297 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.41782 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.63939 s
+execute at time=18000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000738595 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00406378 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.6e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00492809 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.154948 s
+[CityEnergyModelInstance] execute.simulation current done in 0.160306 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0597535 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.112036 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.29787 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.47288 s
+execute at time=21600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.8e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000784436 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00370711 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 9e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00464286 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.162976 s
+[CityEnergyModelInstance] execute.simulation current done in 0.168028 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0793188 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.122414 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.2713 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.47625 s
+execute at time=25200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000813447 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00404895 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 5.3e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00499759 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.158605 s
+[CityEnergyModelInstance] execute.simulation current done in 0.164013 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0956142 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.113928 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.34162 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.55449 s
+execute at time=28800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000658305 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00423756 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 5.3e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00502479 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.179925 s
+[CityEnergyModelInstance] execute.simulation current done in 0.185326 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.104099 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.124224 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.24922 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.48069 s
+execute at time=32400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000859517 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00925935 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.8e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0102575 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.154855 s
+[CityEnergyModelInstance] execute.simulation current done in 0.165559 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.141285 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.126617 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.19143 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.4626 s
+execute at time=36000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000923257 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.970988 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.407456 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.37964 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.465644 s
+[CityEnergyModelInstance] execute.simulation current done in 1.84567 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.229825 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.161515 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.38017 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.77465 s
+execute at time=39600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000944017 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.92158 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.401122 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.32388 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.297983 s
+[CityEnergyModelInstance] execute.simulation current done in 1.62222 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.185852 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.134141 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.39479 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.71798 s
+execute at time=43200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000928157 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.944057 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.40835 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.35358 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.272397 s
+[CityEnergyModelInstance] execute.simulation current done in 1.62639 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.195839 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.137393 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.30998 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.64642 s
+execute at time=46800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000965688 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.902188 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.415209 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.3186 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.297582 s
+[CityEnergyModelInstance] execute.simulation current done in 1.61659 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.227283 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.115112 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.25896 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.60464 s
+execute at time=50400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00106543 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.894308 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.41755 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.31315 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.349767 s
+[CityEnergyModelInstance] execute.simulation current done in 1.66334 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.224843 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.182643 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.37568 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.78647 s
+execute at time=54000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00112465 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.898271 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.410208 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.30987 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.250384 s
+[CityEnergyModelInstance] execute.simulation current done in 1.56069 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.263304 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.119964 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.26161 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.64812 s
+execute at time=57600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.4e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00113333 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.910496 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.4022 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.31411 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.369271 s
+[CityEnergyModelInstance] execute.simulation current done in 1.6839 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.139423 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.1238 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.24616 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.51266 s
+execute at time=61200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.4e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00116266 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.981391 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.418893 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 1.40171 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.31491 s
+[CityEnergyModelInstance] execute.simulation current done in 1.71701 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.223331 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.142386 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.71546 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.0845 s
+execute at time=64800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000701696 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00399998 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.5e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00483285 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.419304 s
+[CityEnergyModelInstance] execute.simulation current done in 0.424556 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0441055 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.108506 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.25654 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.41252 s
+execute at time=68400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000690026 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00427454 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.9e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00509009 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.148578 s
+[CityEnergyModelInstance] execute.simulation current done in 0.154047 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0794356 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.121718 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.26826 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.47266 s
+execute at time=72000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000746806 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00425258 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.6e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00512436 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.125458 s
+[CityEnergyModelInstance] execute.simulation current done in 0.131008 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0854945 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.135816 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.45723 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.68194 s
+execute at time=75600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.4e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000768936 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00407568 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 6.2e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00499806 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.171551 s
+[CityEnergyModelInstance] execute.simulation current done in 0.17693 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0795435 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.165786 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.34403 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.59277 s
+execute at time=79200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000775036 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00460794 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 5e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00550925 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.162125 s
+[CityEnergyModelInstance] execute.simulation current done in 0.168026 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.230654 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.179419 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.86372 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.27706 s
+execute at time=82800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000668386 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00422738 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 6e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00502337 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.166966 s
+[CityEnergyModelInstance] execute.simulation current done in 0.172359 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.394321 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.138366 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.27506 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.81099 s
+execute at time=86400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 3.8e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000645256 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00436162 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 6.8e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00513723 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.184221 s
+[CityEnergyModelInstance] execute.simulation current done in 0.18971 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.34634 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.137529 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.33607 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.82313 s
+[CityEnergyModelInstance] execute current done in 66.1206 s
++-------------------------------------------------------------------------------------------------------------------------------+
+|                                                     City_Energy_Modeling                                                      |
++-------------------------------------------------------------------------------------------------------------------------------+
+| +-------------+-------------------------------------------------------------------------------------------------------------+ |
+| | logs        | /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/logs         | |
+| +-------------+-------------------------------------------------------------------------------------------------------------+ |
+| | journal     | /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/journal.json | |
+| +-------------+-------------------------------------------------------------------------------------------------------------+ |
+| | directories | +------------------------------------------------------------------------------------------------+          | |
+| |             | | /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512 |          | |
+| |             | +------------------------------------------------------------------------------------------------+          | |
+| |             | | /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home                                       |          | |
+| |             | +------------------------------------------------------------------------------------------------+          | |
+| +-------------+-------------------------------------------------------------------------------------------------------------+ |
++-------------------------------------------------------------------------------------------------------------------------------+
+
+[ Stopping Feel++ ] application City_Energy_Modeling execution time 76.8869s</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feelpp_kub_cem_info"><a class="anchor" href="#_feelpp_kub_cem_info"></a>4. feelpp_kub_cem.INFO</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Log file created at: 2025/04/03 14:52:10
+Running on machine: cn0577
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0403 14:52:10.644714 124550 environment.cpp:1708] File /input_data/kub_benchmark/2km/preprocessing/partitioning/np_512/mesh.lod0.json found
+I0403 14:52:10.646510 124550 loadmesh.hpp:246]  Loading mesh in json+h5 format "/input_data/kub_benchmark/2km/preprocessing/partitioning/np_512/mesh.lod0.json"
+I0403 14:52:11.089165 124550 partitionio.hpp:1134] read stat points 735497,1439,0
+I0403 14:52:11.089180 124550 partitionio.hpp:1137] read stat elements 1288248,2530,0
+I0403 14:52:11.089183 124550 partitionio.hpp:1140] read stat ghost_elements 504,0,0
+I0403 14:52:11.089185 124550 partitionio.hpp:1143] read stat marked_faces 209772,420,0
+I0403 14:52:11.089187 124550 partitionio.hpp:1146] read stat marked_edges 0,0,0
+I0403 14:52:11.089190 124550 partitionio.hpp:1149] read stat marked_points 0,0,0
+I0403 14:52:11.089398 124550 partitionio.hpp:1168] loaded points_ids:1x735497
+I0403 14:52:11.089447 124550 partitionio.hpp:1170] loaded points_coords:1x2206491
+I0403 14:52:11.125715 124550 partitionio.hpp:1267] loaded elements:1x5152992
+I0403 14:52:11.131459 124550 partitionio.hpp:1373] loaded ghost_elements:1x504
+I0403 14:52:11.134243 124550 partitionio.hpp:1568] loaded marked_subentities:1x629316
+I0403 14:52:11.138221 124550 meshimpl.hpp:1411] We have 420 faces in the database
+I0403 14:52:11.139834 124550 meshimpl.hpp:1890] update boundary points...
+I0403 14:52:11.139840 124550 meshimpl.hpp:1910] update boundary elements...
+I0403 14:52:12.293792 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_sun using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_sun ,fmuName: sun
+I0403 14:52:12.348937 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:12.349488 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:12.378135 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor0 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor0 ,fmuName: lod0.buildingfloor0
+I0403 14:52:12.449884 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:12.450423 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:12.539171 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor1 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor1 ,fmuName: lod0.buildingfloor1
+I0403 14:52:12.614334 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:12.614902 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:12.711686 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor2 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor2 ,fmuName: lod0.buildingfloor2
+I0403 14:52:12.792160 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:12.792776 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:12.926614 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor3 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor3 ,fmuName: lod0.buildingfloor3
+I0403 14:52:13.015028 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:13.015682 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:13.206080 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor4 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor4 ,fmuName: lod0.buildingfloor4
+I0403 14:52:13.305294 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:13.305939 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:13.595034 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor5 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor5 ,fmuName: lod0.buildingfloor5
+I0403 14:52:13.699508 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:13.700188 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:13.939167 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor6 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor6 ,fmuName: lod0.buildingfloor6
+I0403 14:52:14.060807 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:14.061703 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:14.470407 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor7 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor7 ,fmuName: lod0.buildingfloor7
+I0403 14:52:14.591187 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:14.591840 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:15.006937 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor8 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor8 ,fmuName: lod0.buildingfloor8
+I0403 14:52:15.136654 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:15.137326 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0403 14:52:15.609570 124550 mpifmu.cpp:149] [mpifmu] unzipPath=/disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor9 using unzipPath: /disco2fs/ehpc-dev-2024d05-047/vchabannes/apptainer_home/kub/1b8ea4a3/Paris_partitioned/np_512/fmus/fmi4cpp_lod0.buildingfloor9 ,fmuName: lod0.buildingfloor9
+I0403 14:52:15.750167 124550 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0403 14:52:15.750834 124550 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+W0403 14:52:16.425930 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 65104209 not simulated
+W0403 14:52:16.573554 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 104416137 not simulated
+W0403 14:52:18.111575 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 63564196 not simulated
+W0403 14:52:18.354377 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 65104161 not simulated
+I0403 14:52:18.576908 124550 worldcomm.cpp:895] [rank 0] [DofTable::build] starts, has mesh support: false
+I0403 14:52:18.577109 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] starts, dof_indices empty: true
+I0403 14:52:18.577113 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] allocation done
+I0403 14:52:18.577131 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap]  n_elts =  2530 on processor 0
+I0403 14:52:18.577576 124550 worldcomm.cpp:895] [rank 0] [builddofmap - 0] dof generation hasNoElt : false theFirstDF: 0 thelastDof: 2529
+I0403 14:52:18.577709 124550 worldcomm.cpp:895] [rank 0] [builddofmap - 0] gather discontinuous dof info hasNoElt : false theFirstDF: 0 thelastDof: 2529
+I0403 14:52:18.582568 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildGhostDofMap rank=0] starts. hasMeshSupport: false
+I0403 14:52:18.592989 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.592995 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593003 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593005 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593009 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593014 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593017 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593020 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593024 124550 element_impl.hpp:199] creating element u : u
+I0403 14:52:18.593324 124550 exporterimpl.hpp:219] [Exporter] format :  ensightgold
+I0403 14:52:18.593326 124550 exporterimpl.hpp:220] [Exporter] N      :  1
+I0403 14:52:29.454247 124550 worldcomm.cpp:895] [rank 0] [DofTable::build] starts, has mesh support: false
+I0403 14:52:29.454465 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] starts, dof_indices empty: true
+I0403 14:52:29.454468 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] allocation done
+I0403 14:52:29.454485 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap]  n_elts =  2530 on processor 0
+I0403 14:52:29.455013 124550 worldcomm.cpp:895] [rank 0] [builddofmap - 0] dof generation hasNoElt : false theFirstDF: 0 thelastDof: 2529
+I0403 14:52:29.455015 124550 worldcomm.cpp:895] [rank 0] [builddofmap - 0] gather discontinuous dof info hasNoElt : false theFirstDF: 0 thelastDof: 2529
+I0403 14:52:29.459446 124550 worldcomm.cpp:895] [rank 0] [DofTable::buildGhostDofMap rank=0] starts. hasMeshSupport: false
+I0403 14:52:29.468170 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:29.468438 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:29.468470 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:29.470639 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:29.472440 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:29.474382 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:29.476447 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:29.478511 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:29.480584 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:29.482678 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:29.484773 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:29.598605 124550 exporterensightgold_impl.hpp:1250] writing part 1
+I0403 14:52:29.680863 124550 exporterensightgold_impl.hpp:1250] writing part 2
+I0403 14:52:29.681420 124550 exporterensightgold_impl.hpp:1250] writing part 3
+I0403 14:52:29.714097 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:29.714100 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:31.654955 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:31.655282 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:31.655300 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:31.657769 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:31.659799 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:31.661935 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:31.664039 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:31.666159 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:31.668285 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:31.670421 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:31.672475 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:31.674475 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:31.674479 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:33.218022 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:33.218335 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:33.218353 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:33.220847 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:33.222991 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:33.225142 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:33.227247 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:33.229377 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:33.231467 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:33.233645 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:33.235648 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:33.237671 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:33.237675 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:34.818884 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:34.819206 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:34.819223 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:34.821774 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:34.823832 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:34.825855 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:34.827857 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:34.829838 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:34.831841 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:34.833811 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:34.835734 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:34.837648 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:34.837651 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:36.572870 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:36.573184 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:36.573202 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:36.575824 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:36.578094 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:36.580269 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:36.582439 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:36.584604 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:36.586827 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:36.588927 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:36.590946 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:36.592895 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:36.592900 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:38.243551 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:38.243938 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:38.243957 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:38.246800 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:38.249133 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:38.251348 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:38.253561 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:38.255813 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:38.257997 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:38.260090 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:38.262111 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:38.264110 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:38.264113 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:39.891924 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:39.892244 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:39.892264 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:39.894971 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:39.897179 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:39.899387 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:39.901537 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:39.903820 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:39.905948 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:39.908051 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:39.910045 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:39.912014 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:39.912016 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:41.649216 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:41.650005 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:41.650027 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:41.652523 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:41.654681 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:41.656687 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:41.658653 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:41.660642 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:41.662667 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:41.664654 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:41.666589 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:41.668503 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:41.668506 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:43.336047 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:43.336362 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:43.336382 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:43.339064 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:43.341325 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:43.343523 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:43.345749 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:43.347908 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:43.350122 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:43.352207 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:43.354269 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:43.356231 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:43.356235 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:46.766324 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:46.766664 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:46.766683 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:46.769197 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:46.771318 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:46.773336 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:46.775343 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:46.777328 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:46.779304 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:46.781302 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:46.783278 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:46.785174 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:46.785177 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:50.091997 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:50.092347 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:50.092366 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:50.094960 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:50.097031 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:50.099047 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:50.101039 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:50.103017 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:50.105017 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:50.107003 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:50.108968 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:50.110867 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:50.110869 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:53.450186 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:53.450511 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:53.450531 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:53.453078 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:53.455174 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:53.457224 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:53.459252 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:53.461242 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:53.463244 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:53.465224 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:53.467213 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:53.469126 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:53.469130 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:52:56.722816 124550 element_impl.hpp:199] creating element field : field
+I0403 14:52:56.723163 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:52:56.723186 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:52:56.725807 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:52:56.728087 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:52:56.730360 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:52:56.732533 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:52:56.734822 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:52:56.736982 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:52:56.739133 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:52:56.741153 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:52:56.743125 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:52:56.743129 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:00.056056 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:00.056398 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:00.056417 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:00.059173 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:00.061480 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:00.063726 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:00.065945 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:00.068171 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:00.070358 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:00.072482 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:00.074573 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:00.076534 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:00.076536 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:03.378134 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:03.378466 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:03.378561 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:03.381134 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:03.383258 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:03.385257 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:03.387218 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:03.389176 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:03.391182 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:03.393136 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:03.395138 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:03.396996 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:03.396998 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:06.590520 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:06.590880 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:06.590902 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:06.593427 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:06.595491 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:06.597512 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:06.599519 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:06.601521 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:06.603531 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:06.605527 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:06.607466 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:06.609385 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:06.609387 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:09.923698 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:09.924026 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:09.924046 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:09.926760 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:09.929100 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:09.931324 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:09.933472 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:09.935699 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:09.937850 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:09.939895 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:09.941931 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:09.943859 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:09.943862 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:12.219903 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:12.220762 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:12.220785 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:12.223528 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:12.225879 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:12.228103 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:12.230346 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:12.232502 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:12.234725 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:12.236733 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:12.238788 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:12.240751 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:12.240756 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:13.834991 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:13.835336 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:13.835356 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:13.838169 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:13.840438 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:13.842643 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:13.844872 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:13.847024 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:13.849171 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:13.851229 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:13.853288 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:13.855223 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:13.855226 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:15.457489 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:15.457823 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:15.457842 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:15.460359 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:15.462527 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:15.464685 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:15.466941 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:15.469151 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:15.471431 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:15.473649 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:15.475816 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:15.477814 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:15.477818 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:17.341735 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:17.342083 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:17.342106 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:17.344774 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:17.347090 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:17.349279 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:17.351476 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:17.353689 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:17.355876 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:17.357977 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:17.360002 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:17.362010 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:17.362013 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:19.267472 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:19.267830 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:19.267850 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:19.270470 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:19.272789 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:19.275007 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:19.277208 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:19.279359 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:19.281554 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:19.283613 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:19.285585 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:19.287510 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:19.287513 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:21.837555 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:21.837899 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:21.837919 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:21.840430 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:21.842546 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:21.844574 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:21.846581 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:21.848587 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:21.850572 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:21.852581 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:21.854561 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:21.856649 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:21.856652 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:23.789609 124550 element_impl.hpp:199] creating element field : field
+I0403 14:53:23.789947 124550 element_impl.hpp:199] creating element pid : field
+I0403 14:53:23.789968 124550 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0403 14:53:23.792539 124550 element_impl.hpp:199] creating element Energy : u
+I0403 14:53:23.794697 124550 element_impl.hpp:199] creating element PMV : u
+I0403 14:53:23.796741 124550 element_impl.hpp:199] creating element PPD : u
+I0403 14:53:23.798753 124550 element_impl.hpp:199] creating element QFlowCooling : u
+I0403 14:53:23.800782 124550 element_impl.hpp:199] creating element QFlowHeating : u
+I0403 14:53:23.802806 124550 element_impl.hpp:199] creating element temperature_ambiance : u
+I0403 14:53:23.804811 124550 element_impl.hpp:199] creating element temperature_exterior : u
+I0403 14:53:23.806766 124550 element_impl.hpp:199] creating element temperature_interior : u
+I0403 14:53:23.808688 124550 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0403 14:53:23.808691 124550 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0403 14:53:25.500967 124550 environment.cpp:2423] Environment::clearSomeMemory before: PETSC get current memory usage (resident memory): 682516  KBytes 682.516  MBytes 0.682516 GBytes
+I0403 14:53:25.500982 124550 environment.cpp:2428] Environment::clearSomeMemory before: PETSC get current PETSC Malloc usage: 0  KBytes 0 MBytes 0 GBytes
+I0403 14:53:25.500988 124550 environment.cpp:2430] Environment::clearSomeMemory before: PETSC get maximum PETSC Malloc usage(largest memory ever used so far): 0  KBytes 0 MBytes 0 GBytes
+I0403 14:53:25.501145 124550 environment.cpp:2423] Environment::clearSomeMemory after: PETSC get current memory usage (resident memory): 682516  KBytes 682.516  MBytes 0.682516 GBytes
+I0403 14:53:25.501149 124550 environment.cpp:2428] Environment::clearSomeMemory after: PETSC get current PETSC Malloc usage: 0  KBytes 0 MBytes 0 GBytes
+I0403 14:53:25.501152 124550 environment.cpp:2430] Environment::clearSomeMemory after: PETSC get maximum PETSC Malloc usage(largest memory ever used so far): 0  KBytes 0 MBytes 0 GBytes</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feelpp_kub_cem_warning"><a class="anchor" href="#_feelpp_kub_cem_warning"></a>5. feelpp_kub_cem.WARNING</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Log file created at: 2025/04/03 14:52:16
+Running on machine: cn0577
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0403 14:52:16.425930 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 65104209 not simulated
+W0403 14:52:16.573554 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 104416137 not simulated
+W0403 14:52:18.111575 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 63564196 not simulated
+W0403 14:52:18.354377 124550 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 65104161 not simulated</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer" style="border-top: 2px solid #e9e9e9; background-color: #fafafa; padding-bottom: 2em; padding-top: 2em;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 0.5em;">
+        <div>
+            <a href="https://www.cemosis.fr">
+                <img src="../../../../../../_/img/cemosis-logo.svg" alt="Cemosis logo" height="50">
+            </a>
+        </div>
+        <span style="font-size: 0.8rem; color: #9e9e9e">© 2025 <a href="https://www.cemosis.fr" style="text-decoration: underline;">Cemosis</a>, Université de Strasbourg</span>
+    </div>
+</footer>
+<script id="site-script" src="../../../../../../_/js/site.js" data-ui-root-path="../../../../../../_"></script>
+
+
+<script async src="../../../../../../_/js/vendor/fontawesome-icon-defs.js"></script>
+<script async src="../../../../../../_/js/vendor/fontawesome.js"></script>
+<script async src="../../../../../../_/js/vendor/highlight.js"></script>
+
+
+<script type="text/javascript">
+function toggleFullScreen() {
+   var doc = window.document;
+   var docEl = doc.documentElement;
+
+   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+       requestFullScreen.call(docEl);
+   }
+   else {
+       cancelFullScreen.call(doc);
+   }
+}
+</script>
+  </body>
+</html>
