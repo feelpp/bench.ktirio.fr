@@ -1,10 +1,10 @@
 {
     "executable": "feelpp_kub_cem",
     "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
-    "use_case_name": "Paris_Berlin",
+    "use_case_name": "Berlin",
     "timeout":"0-00:30:0",
     "resources":{
-        "tasks":"{{parameters.tasks.value}}",
+        "tasks":"{{parameters.resources.tasks.value}}",
         "exclusive_access":true
     },
     "platforms": {
@@ -27,25 +27,11 @@
         }
     },
     "remote_input_dependencies":{
-        "berlin_vegetation_1km":{"girder":{"folder":"67b7517f4c9ccbdde21a57b3"},"destination":"kub/Berlin/vegetation/1km"},
-        "berlin_vegetation_2km":{"girder":{"folder":"67b751ee4c9ccbdde21a57b6"},"destination":"kub/Berlin/vegetation/2km"},
-        // "berlin_vegetation_4km":{"girder":{"folder":"67d1888fda2d67521b36ad66"},"destination":"kub/Berlin/vegetation/4km"},
+        "1km":{"girder":{"folder":"67b7517f4c9ccbdde21a57b3"},"destination":"kub/Berlin/vegetation/1km"},
+        "2km":{"girder":{"folder":"67b751ee4c9ccbdde21a57b6"},"destination":"kub/Berlin/vegetation/2km"},
+        "4km":{"girder":{"folder":"67d1888fda2d67521b36ad66"},"destination":"kub/Berlin/vegetation/4km"},
 
-        // "berlin_noVegetation_4km":{"girder":{"folder":"67d18ebcda2d67521b36ad8f"},"destination":"kub/Berlin/vegetation/4km"},
-        // "berlin_noVegetation_5km":{"girder":{"folder":"67d18ec0da2d67521b36ad90"},"destination":"kub/Berlin/vegetation/5km"},
-        // "berlin_noVegetation_10km":{"girder":{"folder":"67d18ec5da2d67521b36ad91"},"destination":"kub/Berlin/vegetation/10km"},
-
-        "berlin_weather":{"girder":{"file":"67b7522e4c9ccbdde21a57c9"},"destination":"kub/Berlin/weather.csv"},
-
-        "paris_vegetation_1km":{"girder":{"folder":"67b7517b4c9ccbdde21a57b2"},"destination":"kub/Paris/vegetation/1km"},
-        "paris_vegetation_2km":{"girder":{"folder":"67b7520b4c9ccbdde21a57b7"},"destination":"kub/Paris/vegetation/2km"},
-        // "paris_vegetation_4km":{"girder":{"folder":"67c6cfad4c9ccbdde21a59a4"},"destination":"kub/Paris/vegetation/4km"},
-
-        // "paris_noVegetation_4km":{"girder":{"folder":"67c852594c9ccbdde21a5a36"},"destination":"kub/Paris/vegetation/4km"},
-        // "paris_noVegetation_5km":{"girder":{"folder":"67c8515d4c9ccbdde21a5a2c"},"destination":"kub/Paris/vegetation/5km"},
-        // "paris_noVegetation_10km":{"girder":{"folder":"67c6f35f4c9ccbdde21a59c2"},"destination":"kub/Paris/vegetation/10km"},
-
-        "paris_weather":{"girder":{"file":"67b752574c9ccbdde21a57ed"},"destination":"kub/Paris/weather.csv"},
+        "weather":{"girder":{"file":"67b7522e4c9ccbdde21a57c9"},"destination":"kub/Berlin/weather.csv"},
 
         "idealHeaters":{"girder":{"file":"67ceb83eda2d67521b36ac88"},"destination":"kub/idealHeaters.cfg"},
         "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
@@ -56,9 +42,9 @@
         "simulators":"kub/simulators",
         "simulators_cfg":"kub/idealHeaters.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
-        "gis":"kub/{{parameters.city.value}}/{{fixed.vegetation}}/{{parameters.radius.value}}/gis.json",
-        "mesh":"kub/{{parameters.city.value}}/{{fixed.vegetation}}/{{parameters.radius.value}}//{{fixed.mesh.filename}}.msh",
-        "weather":"kub/{{parameters.city.value}}/weather.csv",
+        "gis":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}/gis.json",
+        "mesh":"kub/Berlin/{{fixed.vegetation}}/{{parameters.radius.value}}//{{fixed.mesh.filename}}.msh",
+        "weather":"kub/Berlin/weather.csv",
         "scenarios":"kub/scenarios_local"
     },
     "options": [
@@ -89,8 +75,8 @@
     ],
     "additional_files":{
         "custom_logs":[
-            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO",
-            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING"
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.WARNING",
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.WARNING"
         ]
     },
     "scalability": {
@@ -99,7 +85,7 @@
         "stages": [
             {
                 "name":"",
-                "filepath": "cem/instances/np_{{parameters.tasks.value}}/logs/timers.json",
+                "filepath": "cem/instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
                 "format": "json",
                 "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
             },
@@ -107,7 +93,7 @@
                 "name":"",
                 "filepath": "cem/logs/timers.json",
                 "format": "json",
-                "variables_path":["*.timeElapsed.max","*.subtimers.*.subtimers.*.timeElapsed.max"]
+                "variables_path":["*.timeElapsed.max","*.subtimers.*.timeElapsed.max","*.subtimers.*.subtimers.*.timeElapsed.max"]
             }
         ]
     },
@@ -115,7 +101,6 @@
         "success": ["[ Stopping Feel++ ]"],
         "error": ["Error"]
     },
-    //Custom field (fixed)
     "fixed":{
         "vegetation":"vegetation",
         "mesh":{ "filename":"mesh_0_Lod0", "lod":"lod0" },
@@ -123,16 +108,21 @@
     },
     "parameters": [
         {
-            "name": "tasks",
-            "sequence":[64,128,192,256]
-        },
-        {
-            "name": "city",
-            "sequence": ["Paris","Berlin"]
+            "name":"resources",
+            "zip":[
+                {
+                    "name":"tasks",
+                    "sequence":[128,256,512,1024,2048,4096,8192]
+                },
+                {
+                    "name":"nodes",
+                    "sequence":[1,2,4,8,16,32,64]
+                }
+            ]
         },
         {
             "name":"radius",
-            "sequence":["1km","2km"]
+            "sequence":["1km","2km","4km"]
         }
     ]
 }

@@ -1,0 +1,150 @@
+{
+    "executable": "feelpp_kub_cem",
+    "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
+    "use_case_name": "Cities",
+    "timeout":"0-00:30:0",
+    "resources":{
+        "tasks":"{{parameters.tasks.value}}",
+        "exclusive_access":true
+    },
+    "platforms": {
+        "apptainer":{
+            "image": {
+                "url":"oras://ghcr.io/feelpp/ktirio-urban-building:master-sif",
+                "filepath":"{{machine.containers.apptainer.image_base_dir}}/kub.sif"
+            },
+            "input_dir":"/input_data",
+            "options": [
+                "--home {{machine.output_app_dir}}",
+                "--bind {{machine.input_dataset_base_dir}}:{{platforms.apptainer.input_dir}}",
+                "--env OMP_NUM_THREADS=1"
+            ],
+            "append_app_option":[]
+        },
+        "builtin":{
+            "input_dir":"{{machine.input_dataset_base_dir}}",
+            "append_app_option":[]
+        }
+    },
+    "remote_input_dependencies":{
+        "Paris":{"girder":{"folder":"67b7532f4c9ccbdde21a5800"},"destination":"kub/Paris"},
+        "Berlin":{"girder":{"folder":"67b7532f4c9ccbdde21a5800"},"destination":"kub/Berlin"},
+
+        "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub/simulatorCfgs"},
+
+        "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
+        "simulators":{"girder":{"item":"67cec10fda2d67521b36acc7"},"destination":"kub/"},
+        "scenarios":{"girder":{"item":"67b496894c9ccbdde21a5769"},"destination":"kub/"}
+    },
+    "input_file_dependencies":{
+        "simulators":"kub/simulators",
+        "simulators_cfg":"kub/simulatorCfgs/{{parameters.simulators.value}}.cfg",
+        "sun_fmu":"kub/simulators/Sun.fmu",
+        "gis":"kub/{{parameters.city.value}}/{{parameters.vegetation.value}}/{{parameters.radius.value}}/gis.json",
+        "mesh":"kub/{{parameters.city.value}}/{{parameters.vegetation.value}}/{{parameters.radius.value}}/{{parameters.mesh.filename.value}}.msh",
+        "weather":"kub/{{parameters.city.value}}/weather-data-0.hourly-variables.csv",
+        "scenarios":"kub/scenarios_local"
+    },
+    "options": [
+        "--config-files {{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.simulators_cfg}}",
+        "--cem.simulator.lod0.modelisation.maxfloors=10",
+
+        "--cem.simulator.sun.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.sun_fmu}}",
+
+        "--cem.gis.metadata.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.gis}}",
+        "--cem.mesh.{{parameters.mesh.lod.value}}.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.mesh}}",
+        "--cem.weather.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.weather}}",
+
+        "--cem.scenarios.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.scenarios}}/scenarios.json",
+
+        "--cem.instance.time.start={{parameters.time.start.value}}",
+        "--cem.instance.time.stop={{parameters.time.stop.value}}",
+        "--cem.instance.time.step={{parameters.time.step.value}}",
+
+        "--cem.instance.postprocess.export.visualization.enabled={{parameters.exports.visualization.value}}",
+        "--cem.instance.postprocess.export.report.enabled={{parameters.exports.report.value}}",
+        "--cem.instance.postprocess.export.outputs.csv.enabled={{parameters.exports.csv.value}}",
+        "--cem.instance.postprocess.export.outputs.enabled={{parameters.exports.outputs.value}}",
+        "--cem.instance.solar_shading.enabled={{parameters.solar_shading.value}}",
+
+        "--cem.database.directory {{output_directory}}",
+        "--directory {{output_directory}}"
+    ],
+    "additional_files":{
+        "custom_logs":[
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/0-199/{{executable}}.WARNING",
+            "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.tasks.value}}/logs/{{executable}}.WARNING"
+        ]
+    },
+    "scalability": {
+        "directory": "{{output_directory}}",
+        "clean_directory":true,
+        "stages": [
+            {
+                "name":"",
+                "filepath": "cem/instances/np_{{parameters.tasks.value}}/logs/timers.json",
+                "format": "json",
+                "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
+            },
+            {
+                "name":"",
+                "filepath": "cem/logs/timers.json",
+                "format": "json",
+                "variables_path":["*.timeElapsed.max","*.subtimers.*.timeElapsed.max","*.subtimers.*.subtimers.*.timeElapsed.max"]
+            }
+        ]
+    },
+    "sanity": {
+        "success": ["[ Stopping Feel++ ]"],
+        "error": ["Error"]
+    },
+    "parameters": [
+        {
+            "name": "tasks",
+            "sequence":[32,64,128,256]
+        },
+        {
+            "name":"radius",
+            "sequence":["1km","2km","4km","5km","10km"]
+        },
+        {
+            "name":"vegetation",
+            "sequence":["vegetation","noVegetation"],
+            "conditions":{
+                "vegetation": [{"radius":["1km","2km","4km"], "solar_shading":["true"]}],
+                "noVegetation": [{"solar_shading":["false"]}]
+            }
+        },
+        {
+            "name":"city",
+            "sequence":["Paris","Berlin"]
+        },
+        {
+            "name":"solar_shading",
+            "sequence":["true","false"]
+        },
+        {
+            "name":"mesh",
+            "sequence":[
+                { "filename":"mesh_0_Lod0", "lod":"lod0" }
+            ]
+        },
+        {
+            "name":"time",
+            "sequence":[
+                { "start":0,"stop":86400,"step":3600,"season":"winter" }
+            ]
+        },
+        {
+            "name":"simulators",
+            "sequence":["idealHeaters","heatPumps","boilers"]
+        },
+        {
+            "name":"exports",
+            "sequence":[
+                {"outputs":"true","visualization":"false","report":"false","csv":"false"},
+                {"outputs":"true","visualization":"true","report":"true","csv":"false"}
+            ]
+        }
+    ]
+}
