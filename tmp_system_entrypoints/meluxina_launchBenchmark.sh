@@ -25,4 +25,5 @@ feelpp-benchmarking-exec \
     -mc $MACHINE_CONFIG \
     -bc $BENCHMARK_CONFIG \
     -pc $PLOTS_CONFIG \
-    -v
+    -v \
+    -rfm="-v --exec-order=name --max-retries=2"
