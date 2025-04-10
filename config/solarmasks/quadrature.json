@@ -37,9 +37,9 @@
         "simulators":"kub/simulators",
         "simulators_cfg":"kub/{{variables.simulator}}.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
-        "partitioned_mesh":"kub_benchmark/{{variables.radius}}/preprocessing/partitioning/np_{{variables.tasks}}",
-        "dataregistry_json":"kub_benchmark/{{variables.radius}}/preprocessing/.dataregistry.json",
-        "preprocessing_json":"kub_benchmark/{{variables.radius}}/preprocessing/preprocessing.json",
+        "partitioned_mesh":"kub_benchmark/{{variable.city.name}}/{{variables.radius}}/preprocessing/partitioning/np_{{variables.tasks}}",
+        "dataregistry_json":"kub_benchmark/{{variable.city.name}}/{{variables.radius}}/preprocessing/.dataregistry.json",
+        "preprocessing_json":"kub_benchmark/{{variable.city.name}}/{{variables.radius}}/preprocessing/preprocessing.json",
         "weather":"kub/{{variables.city.name}}/weather.csv",
         "scenarios":"kub/scenarios_local"
     },
@@ -48,7 +48,7 @@
         "--cem.simulator.sun.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.sun_fmu}}",
         "--cem.simulator.lod0.modelisation.maxfloors=10",
 
-        "--cem.preprocessing.dataregistry.directory={{platforms.{{machine.platform}}.input_dir}}/kub_benchmark/{{variables.radius}}/preprocessing",
+        "--cem.preprocessing.dataregistry.directory={{platforms.{{machine.platform}}.input_dir}}/kub_benchmark/{{variable.city.name}}/{{variables.radius}}/preprocessing",
 
         "--cem.weather.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.weather}}",
         "--cem.scenarios.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.scenarios}}/scenarios.json",
