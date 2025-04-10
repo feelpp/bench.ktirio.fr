@@ -1,0 +1,140 @@
+{
+    "executable": "feelpp_kub_cem",
+    "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
+    "use_case_name": "Berlin_partitioned",
+    "timeout":"0-00:30:0",
+    "resources":{
+        "tasks":"{{parameters.resources.tasks.value}}",
+        "memory":"{{parameters.memory.value}}",
+        "exclusive_access":true
+    },
+    "platforms": {
+        "apptainer":{
+            "image": {
+                "filepath":"{{machine.containers.apptainer.image_base_dir}}/kub_feature-cem_partitioning-sif"
+            },
+            "input_dir":"/input_data",
+            "options": [
+                "--home {{machine.output_app_dir}}",
+                "--bind {{machine.input_dataset_base_dir}}:{{platforms.apptainer.input_dir}}",
+                "--env OMP_NUM_THREADS=1"
+            ],
+            "append_app_option":[]
+        },
+        "builtin":{
+            "input_dir":"{{machine.input_dataset_base_dir}}",
+            "append_app_option":[]
+        }
+    },
+    "remote_input_dependencies":{
+        "weather":{"girder":{"file":"67b7522e4c9ccbdde21a57c9"},"destination":"kub/Berlin/weather.csv"},
+
+        "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub"},
+        "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
+        "simulators":{"girder":{"item":"67cec10fda2d67521b36acc7"},"destination":"kub/"},
+        "scenarios":{"girder":{"item":"67b496894c9ccbdde21a5769"},"destination":"kub/"}
+    },
+    "input_file_dependencies":{
+        "simulators":"kub/simulators",
+        "simulators_cfg":"kub/{{fixed.simulator}}.cfg",
+        "sun_fmu":"kub/simulators/Sun.fmu",
+        "partitioned_mesh":"kub_benchmark/Berlin/{{parameters.radius.value}}/preprocessing/partitioning/np_{{parameters.resources.tasks.value}}",
+        "dataregistry_json":"kub_benchmark/Berlin/{{parameters.radius.value}}/preprocessing/.dataregistry.json",
+        "preprocessing_json":"kub_benchmark/Berlin/{{parameters.radius.value}}/preprocessing/preprocessing.json",
+        "weather":"kub/Berlin/weather.csv",
+        "scenarios":"kub/scenarios_local"
+    },
+    "options": [
+        "--config-files {{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.simulators_cfg}}",
+        "--cem.simulator.sun.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.sun_fmu}}",
+        "--cem.simulator.lod0.modelisation.maxfloors=10",
+
+        "--cem.preprocessing.dataregistry.directory={{platforms.{{machine.platform}}.input_dir}}/kub_benchmark/Berlin/{{parameters.radius.value}}/preprocessing",
+
+        "--cem.weather.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.weather}}",
+        "--cem.scenarios.filename={{platforms.{{machine.platform}}.input_dir}}/{{input_file_dependencies.scenarios}}/scenarios.json",
+
+        "--cem.instance.time.start={{fixed.time.start}}",
+        "--cem.instance.time.stop={{fixed.time.stop}}",
+        "--cem.instance.time.step={{fixed.time.step}}",
+
+        "--cem.instance.postprocess.export.visualization.enabled=true",
+        "--cem.instance.postprocess.export.report.enabled=true",
+        "--cem.instance.postprocess.export.outputs.enabled=true",
+
+        "--cem.instance.solar_shading.enabled=true",
+        "--cem.instance.idealflows.enabled=true",
+
+        "--cem.database.directory {{output_directory}}",
+        "--directory {{output_directory}}",
+        "--cem.instance.solar_shading.ray-tracing.quad-order {{fixed.quad_order}}"
+    ],
+    "additional_files":{
+        "custom_logs":[
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.WARNING", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.ERROR",
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.WARNING","{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.ERROR"
+        ]
+    },
+    "scalability": {
+        "directory": "{{output_directory}}",
+        "clean_directory":true,
+        "stages": [
+            {
+                "name":"",
+                "filepath": "instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
+                "format": "json",
+                "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
+            },
+            {
+                "name":"Statistics",
+                "filepath": "instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
+                "format": "json",
+                "variables_path":["execute.subtimers.*.statistics.iterMean.mean","execute.subtimers.*.subtimers.*.statistics.*.*"]
+            },
+            {
+                "name":"",
+                "filepath": "log/timers.json",
+                "format": "json",
+                "variables_path":["*.timeElapsed.max","*.subtimers.*.timeElapsed.max"]
+            }
+        ]
+    },
+    "sanity": {
+        "success": [],
+        "error": []
+    },
+    "fixed":{
+        "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" },
+        "simulator":"idealHeaters",
+        "quad_order":3
+    },
+    "parameters": [
+        {
+            "name":"resources",
+            "zip":[
+                {
+                    "name":"tasks",
+                    "sequence":[1024]
+                },
+                {
+                    "name":"nodes",
+                    "sequence":[8]
+                }
+            ]
+        },
+        {
+            "name":"radius",
+            "sequence":["4km"]
+        },
+        {
+            "name":"memory",
+            "sequence": [100,300,600,1200],
+            "conditions":{
+                "100":[{"radius":["1km","2km","3km"]}],
+                "300":[{"radius":["4km"]}],
+                "600":[{"radius":["5km"]}],
+                "1200":[{"radius":["6km"]}]
+            }
+        }
+    ]
+}
