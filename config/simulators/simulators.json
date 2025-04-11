@@ -1,7 +1,7 @@
 {
     "executable": "feelpp_kub_cem",
     "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
-    "use_case_name": "SM_Quadrature_Order",
+    "use_case_name": "Simulators",
     "timeout":"0-00:15:0",
     "resources":{
         "tasks":"{{variables.tasks}}",
@@ -30,12 +30,12 @@
 
         "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub"},
         "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
-        "simulators":{"girder":{"item":"67cec10fda2d67521b36acc7"},"destination":"kub/"},
+        "simulators":{"girder":{"item":"67e4257cda2d67521b36b95a"},"destination":"kub/"},
         "scenarios":{"girder":{"item":"67b496894c9ccbdde21a5769"},"destination":"kub/"}
     },
     "input_file_dependencies":{
         "simulators":"kub/simulators",
-        "simulators_cfg":"kub/{{variables.simulator}}.cfg",
+        "simulators_cfg":"kub/{{parameters.simulator.value}}.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
         "partitioned_mesh":"kub_benchmark/{{variables.city.name}}/{{variables.radius}}/preprocessing/partitioning/np_{{variables.tasks}}",
         "dataregistry_json":"kub_benchmark/{{variables.city.name}}/{{variables.radius}}/preprocessing/.dataregistry.json",
@@ -67,7 +67,8 @@
 
         "--cem.database.directory {{output_directory}}",
         "--directory {{output_directory}}",
-        "--cem.instance.solar_shading.ray-tracing.quad-order {{parameters.quad_ord.value}}"
+        "--cem.instance.solar_shading.ray-tracing.quad-order {{variables.quad_order}}",
+        "> /dev/null 2>&1"
     ],
     "additional_files":{
         "custom_logs":[
@@ -98,13 +99,11 @@
                 "variables_path":["*.timeElapsed.max","*.subtimers.*.timeElapsed.max"]
             },
             {
-                "name":"SolarMasks",
+                "name":"Outputs",
                 "filepath": "instances/np_{{variables.tasks}}/report/report.json",
                 "format": "json",
-                "variables_path":["buildings.total.outputs.solarShadingCoefficients.mean"],
-                "units":{
-                    "*":""
-                }
+                "variables_path":["buildings.total.outputs.QFlowHeating.mean"],
+                "units":{ "*":"" }
             }
         ]
     },
@@ -121,16 +120,12 @@
             "weather_girder_id":"67b752574c9ccbdde21a57ed"
         },
         "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" },
-        "simulator":"idealHeaters"
+        "quad_order":0
     },
     "parameters": [
         {
-            "name":"quad_ord",
-            "range":{
-                "min":0,
-                "max":5,
-                "step":1
-            }
+            "name":"simulator",
+            "sequence":["idealHeaters","boilers","heatPumps"]
         }
     ]
 }
