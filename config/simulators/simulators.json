@@ -30,7 +30,7 @@
 
         "simulators_configs":{"girder":{"folder":"67e6a403da2d67521b36bcaf"},"destination":"kub"},
         "sun_fmu":{"girder":{"file":"66c5adcab0e95728eb00fcd2"},"destination":"kub/simulators/Sun.fmu"},
-        "simulators":{"girder":{"item":"67cec10fda2d67521b36acc7"},"destination":"kub/"},
+        "simulators":{"girder":{"item":"67e4257cda2d67521b36b95a"},"destination":"kub/"},
         "scenarios":{"girder":{"item":"67b496894c9ccbdde21a5769"},"destination":"kub/"}
     },
     "input_file_dependencies":{
@@ -67,8 +67,8 @@
 
         "--cem.database.directory {{output_directory}}",
         "--directory {{output_directory}}",
-        "--cem.instance.solar_shading.ray-tracing.quad-order {{variables.quad_order}}"
-        // "> /dev/null 2>&1"
+        "--cem.instance.solar_shading.ray-tracing.quad-order {{variables.quad_order}}",
+        "> /dev/null 2>&1"
     ],
     "additional_files":{
         "custom_logs":[
@@ -102,16 +102,8 @@
                 "name":"Outputs",
                 "filepath": "instances/np_{{variables.tasks}}/report/report.json",
                 "format": "json",
-                "variables_path":["buildings.total.outputs.*.mean"],
-                "units":{
-                    "*":"",
-                    "QFlowCooling":"W",
-                    "QFlowHeating":"W",
-                    "QFlowExterior":"W",
-                    "temperature_ambiance":"K",
-                    "temperature_exterior":"K",
-                    "temperature_interior":"K"
-                }
+                "variables_path":["buildings.total.outputs.QFlowHeating.mean"],
+                "units":{ "*":"" }
             }
         ]
     },
@@ -120,15 +112,15 @@
         "error": []
     },
     "variables":{
-        "nodes":8,
-        "tasks":1024,
+        "nodes":2,
+        "tasks":256,
         "radius":"3km",
         "city":{
             "name":"Paris",
             "weather_girder_id":"67b752574c9ccbdde21a57ed"
         },
         "time":{ "start":0,"stop":86400,"step":3600,"season":"winter" },
-        "quad_order":3
+        "quad_order":0
     },
     "parameters": [
         {
