@@ -20,16 +20,6 @@
         "color_axis": { "parameter": "performance_variable", "label": "Step" }
     },
     {
-        "title": "Solar Masks - Speedup",
-        "plot_types": [ "scatter" ],
-        "transformation": "speedup",
-        "variables": [ "simulation.solarMasks"],
-        "names": ["solarMasks"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
-        "yaxis": { "label": "speedup"},
-        "color_axis": { "parameter": "performance_variable", "label": "Step" }
-    },
-    {
         "title": "solarMasks Iteration Statistics",
         "plot_types": [ "scatter"],
         "transformation": "performance",
@@ -40,13 +30,35 @@
         "color_axis": { "parameter": "performance_variable", "label": "Statistics" }
     },
     {
-        "title": "solarMasks Iteration Max -- Speedup",
-        "plot_types": [ "scatter"],
-        "transformation": "speedup",
-        "variables": [ "Statistics_simulation.solarMasks.iterMax.max"],
-        "names": ["Max"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
-        "yaxis": { "label": "speedup"},
-        "color_axis": { "parameter": "performance_variable", "label": "Average" }
+        "title":"Solar mask convergence",
+        "plot_types":["scatter"],
+        "transformation":"performance",
+        "variables":[
+            "SolarMasks_mean.8",
+            "SolarMasks_mean.9",
+            "SolarMasks_mean.10",
+            "SolarMasks_mean.11",
+            "SolarMasks_mean.12",
+            "SolarMasks_mean.13",
+            "SolarMasks_mean.14",
+            "SolarMasks_mean.15",
+            "SolarMasks_mean.16",
+            "SolarMasks_mean.17"
+        ],
+        "names":[
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        "xaxis": { "parameter": "performance_variable", "label": "Time" },
+        "yaxis": { "label": "solar shading coefficient"},
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" }
     }
 ]}
