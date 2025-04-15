@@ -4,7 +4,7 @@
     "use_case_name": "SM_Quadrature_Order",
     "timeout":"0-00:15:0",
     "resources":{
-        "tasks":"{{variables.tasks}}",
+        "tasks":"{{parameters.resources.tasks.value}}",
         "exclusive_access":true
     },
     "platforms": {
@@ -37,7 +37,7 @@
         "simulators":"kub/simulators",
         "simulators_cfg":"kub/{{variables.simulator}}.cfg",
         "sun_fmu":"kub/simulators/Sun.fmu",
-        "partitioned_mesh":"kub_benchmark/{{variables.city.name}}/{{variables.radius}}/preprocessing/partitioning/np_{{variables.tasks}}",
+        "partitioned_mesh":"kub_benchmark/{{variables.city.name}}/{{variables.radius}}/preprocessing/partitioning/np_{{parameters.resources.tasks.value}}",
         "dataregistry_json":"kub_benchmark/{{variables.city.name}}/{{variables.radius}}/preprocessing/.dataregistry.json",
         "preprocessing_json":"kub_benchmark/{{variables.city.name}}/{{variables.radius}}/preprocessing/preprocessing.json",
         "weather":"kub/{{variables.city.name}}/weather.csv",
@@ -71,8 +71,8 @@
     ],
     "additional_files":{
         "custom_logs":[
-            "{{output_directory}}/np_{{variables.tasks}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{variables.tasks}}/logs/0-199/{{executable}}.WARNING",
-            "{{output_directory}}/np_{{variables.tasks}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{variables.tasks}}/logs/{{executable}}.WARNING"
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/0-199/{{executable}}.WARNING",
+            "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.INFO", "{{output_directory}}/np_{{parameters.resources.tasks.value}}/logs/{{executable}}.WARNING"
         ]
     },
     "scalability": {
@@ -81,13 +81,13 @@
         "stages": [
             {
                 "name":"",
-                "filepath": "instances/np_{{variables.tasks}}/logs/timers.json",
+                "filepath": "instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
                 "format": "json",
                 "variables_path":["*.timeElapsed.max","execute.subtimers.*.subtimers.*.timeElapsed.max","execute.subtimers.*.timeElapsed.max"]
             },
             {
                 "name":"Statistics",
-                "filepath": "instances/np_{{variables.tasks}}/logs/timers.json",
+                "filepath": "instances/np_{{parameters.resources.tasks.value}}/logs/timers.json",
                 "format": "json",
                 "variables_path":["execute.subtimers.*.statistics.iterMean.mean","execute.subtimers.*.subtimers.*.statistics.*.*"]
             },
@@ -99,7 +99,7 @@
             },
             {
                 "name":"SolarMasks",
-                "filepath": "instances/np_{{variables.tasks}}/report/report.json",
+                "filepath": "instances/np_{{parameters.resources.tasks.value}}/report/report.json",
                 "format": "json",
                 "variables_path":["buildings.total.outputs.solarShadingCoefficients.mean"],
                 "units":{
@@ -113,8 +113,6 @@
         "error": []
     },
     "variables":{
-        "nodes":8,
-        "tasks":1024,
         "radius":"3km",
         "city":{
             "name":"Paris",
@@ -126,11 +124,20 @@
     "parameters": [
         {
             "name":"quad_ord",
-            "range":{
-                "min":0,
-                "max":5,
-                "step":1
-            }
+            "range":{ "min":0, "max":5, "step":1 }
+        },
+        {
+            "name":"resources",
+            "zip":[
+                {
+                    "name":"tasks",
+                    "sequence":[256,384,512,640,768,896,1024,1152,1280]
+                },
+                {
+                    "name":"nodes",
+                    "sequence":[2,3,4,5,6,7,8,9,10]
+                }
+            ]
         }
     ]
 }
