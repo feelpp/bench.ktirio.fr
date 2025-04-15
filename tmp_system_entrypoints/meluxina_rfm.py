@@ -20,16 +20,6 @@ site_configuration = {
                     'processor': {
                         'num_cpus': 128
                     },
-                    'resources': [
-                        {
-                            'name':'launcher_options',
-                            'options':[
-                                '-n','${SLURM_NTASKS}',
-                                '-N','${SLURM_NNODES}',
-                                '--threads-per-core=${SLURM_THREADS_PER_CORE}'
-                            ]
-                        }
-                    ],
                     'devices':[
                         {
                             'type': 'cpu',
