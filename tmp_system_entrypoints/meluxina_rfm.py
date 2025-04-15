@@ -47,7 +47,7 @@ site_configuration = {
             'prepare_cmds':[
                 # "module load Apptainer/1.3.6-GCCcore-13.3.0",
                 'export INSNAME=feelpp_kub_cem_instance',
-                'export APPTAINER_IMAGE=/data/scratch/cladellash/images/kub_feature-cem_partitioning-sif',
+                'export APPTAINER_IMAGE=/mnt/tier1/project/p200506/kub/sifs/kub_feature-cem_partitioning-sif',
                 'srun -N ${SLURM_NNODES} --ntasks-per-node 1 -c 1 apptainer instance start ${APPTAINER_IMAGE} ${INSNAME} &',
                 'sleep 5'
             ],
