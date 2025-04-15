@@ -3,50 +3,120 @@
         "title": "Simulation",
         "plot_types": [ "scatter","grouped_bar","stacked_bar","sunburst","heatmap"],
         "transformation": "performance",
+        "variables": [ "simulation" ],
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
+        "yaxis": { "label": "execution time (s)"},
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" }
+    },
+    {
+        "title": "Simulation -- Speedup",
+        "plot_types": [ "scatter" ],
+        "transformation": "speedup",
+        "variables": [ "simulation" ],
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
+        "yaxis": { "label": "speedup"},
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" }
+    },
+
+
+    {
+        "title": "Simulation Breakdown",
+        "plot_types": [ "scatter","grouped_bar","stacked_bar","sunburst","heatmap"],
+        "transformation": "performance",
         "variables": [ "simulation.buildingExecuteStep", "simulation.solarMasks"],
         "names": ["buildingExecuteStep","solarMasks"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
+        "secondary_axis": { "parameter": "quad_ord", "label": "Quadrature Order" },
         "yaxis": { "label": "execution time (s)"},
         "color_axis": { "parameter": "performance_variable", "label": "Step" }
     },
     {
-        "title": "Simulation - Relative performance",
+        "title": "Simulation Breakdown - Relative performance",
         "plot_types": [ "stacked_bar","grouped_bar"],
         "transformation": "relative_performance",
         "variables": [ "simulation.buildingExecuteStep", "simulation.solarMasks"],
         "names": ["buildingExecuteStep","solarMasks"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
+        "secondary_axis": { "parameter": "quad_ord", "label": "Quadrature Order" },
         "yaxis": { "label": "%"},
         "color_axis": { "parameter": "performance_variable", "label": "Step" }
     },
     {
-        "title": "Solar Masks - Speedup",
+        "title": "Simulation Breakdown - Speedup",
         "plot_types": [ "scatter" ],
         "transformation": "speedup",
-        "variables": [ "simulation.solarMasks"],
-        "names": ["solarMasks"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
+        "variables": [ "simulation.buildingExecuteStep", "simulation.solarMasks"],
+        "names": ["buildingExecuteStep","solarMasks"],
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
+        "secondary_axis": { "parameter": "quad_ord", "label": "Quadrature Order" },
         "yaxis": { "label": "speedup"},
         "color_axis": { "parameter": "performance_variable", "label": "Step" }
     },
+
+
     {
-        "title": "solarMasks Iteration Statistics",
-        "plot_types": [ "scatter"],
+        "title": "Solar Masks",
+        "plot_types": [ "scatter","grouped_bar","stacked_bar","sunburst","heatmap"],
         "transformation": "performance",
-        "variables": [ "Statistics_simulation.solarMasks.iterMax.max","Statistics_simulation.solarMasks.iterMean.mean","Statistics_simulation.solarMasks.iterMin.min"],
-        "names": ["Max","Avg","Min"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
+        "variables": [ "simulation.solarMasks" ],
+        "names": ["Solar Masks"],
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
         "yaxis": { "label": "execution time (s)"},
-        "color_axis": { "parameter": "performance_variable", "label": "Statistics" }
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" }
     },
     {
-        "title": "solarMasks Iteration Max -- Speedup",
-        "plot_types": [ "scatter"],
+        "title": "Solar Masks -- Speedup",
+        "plot_types": [ "scatter" ],
         "transformation": "speedup",
+        "variables": [ "simulation.solarMasks" ],
+        "names": ["Solar Masks"],
+        "xaxis": { "parameter":"resources.nodes", "label":"Nodes" },
+        "yaxis": { "label": "execution time (s)"},
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" }
+    },
+
+
+    {
+        "title": "solarMasks Iteration Maximum",
+        "plot_types": [ "scatter"],
+        "transformation": "performance",
         "variables": [ "Statistics_simulation.solarMasks.iterMax.max"],
-        "names": ["Max"],
-        "xaxis": { "parameter": "quad_ord", "label": "Quadrature Order" },
-        "yaxis": { "label": "speedup"},
-        "color_axis": { "parameter": "performance_variable", "label": "Average" }
+        "names": ["IterMax"],
+        "xaxis": { "parameter": "resources.nodes", "label": "Nodes" },
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" },
+        "yaxis": { "label": "execution time (s)"}
+    },
+    {
+        "title":"Solar mask convergence",
+        "plot_types":["scatter"],
+        "transformation":"performance",
+        "variables":[
+            "SolarMasks_mean.8",
+            "SolarMasks_mean.9",
+            "SolarMasks_mean.10",
+            "SolarMasks_mean.11",
+            "SolarMasks_mean.12",
+            "SolarMasks_mean.13",
+            "SolarMasks_mean.14",
+            "SolarMasks_mean.15",
+            "SolarMasks_mean.16",
+            "SolarMasks_mean.17"
+        ],
+        "names":[
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        "xaxis": { "parameter": "performance_variable", "label": "Time" },
+        "yaxis": { "label": "solar shading coefficient"},
+        "secondary_axis": {"parameter":"resources.nodes","label":"Nodes"},
+        "color_axis": { "parameter": "quad_ord", "label": "Quadrature Order" }
     }
 ]}
