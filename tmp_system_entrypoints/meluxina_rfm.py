@@ -49,7 +49,7 @@ site_configuration = {
                 "module load Apptainer/1.3.6-GCCcore-13.3.0",
                 'export INSNAME=feelpp_kub_cem_instance',
                 'export APPTAINER_IMAGE=/mnt/tier1/project/p200506/kub/sifs/kub_feature-cem_partitioning-sif',
-                'srun -N ${SLURM_NNODES} --ntasks-per-node 1 -c 1 apptainer instance start ${APPTAINER_IMAGE} ${INSNAME} &',
+                'srun -N ${SLURM_NNODES} --ntasks-per-node 1 -c 1 apptainer instance start --bind /mnt/tier1/project/p200506/kub/apptainer_home --bind /mnt/tier1/project/p200506/kub/inputdataset/:/input_data ${APPTAINER_IMAGE} ${INSNAME} &',
                 'sleep 5'
             ],
             'target_systems': ['meluxina:cpu']
