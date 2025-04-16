@@ -2,9 +2,10 @@
     "executable": "feelpp_kub_cem",
     "output_directory": "{{machine.output_app_dir}}/kub/{{instance}}/{{use_case_name}}",
     "use_case_name": "Paris_partitioned",
-    "timeout":"0-00:10:0",
+    "timeout":"0-00:30:0",
     "resources":{
         "tasks":"{{parameters.resources.tasks.value}}",
+        "memory":"{{parameters.memory.value}}",
         "exclusive_access":true
     },
     "apptainer_instance_name":"instance://feelpp_kub_cem_instance",
@@ -115,17 +116,27 @@
             "zip":[
                 {
                     "name":"tasks",
-                    "sequence":[256,512,768,1024]
+                    "sequence":[256,384,512,640,768,896,1024,1152,1280,2560,3840,5120,6400]
                 },
                 {
                     "name":"nodes",
-                    "sequence":[2,4,6,8]
+                    "sequence":[2,3,4,5,6,7,8,9,10,20,30,40,50]
                 }
             ]
         },
         {
             "name":"radius",
-            "sequence":["1km"]
+            "sequence":["1km","2km","3km","4km","5km","6km"]
+        },
+        {
+            "name":"memory",
+            "sequence": [100,300,600,1400],
+            "conditions":{
+                "100":[{"radius":["1km","2km","3km"]}],
+                "300":[{"radius":["4km"]}],
+                "600":[{"radius":["5km"]}],
+                "1400":[{"radius":["6km"]}]
+            }
         }
     ]
 }
