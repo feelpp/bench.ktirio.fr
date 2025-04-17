@@ -140,6 +140,7 @@ jobs:
         -   name: Execute benchmarks (slurm)
             if: ${{ matrix.submit == 'slurm' }}
             run: |
+                ./tmp_system_entrypoints/${{matrix.machine}}.sh
                 srun --partition ${{matrix.submit_partition}} \
                     --time 48:00:00 \
                     --account ${{matrix.project_id}} \
