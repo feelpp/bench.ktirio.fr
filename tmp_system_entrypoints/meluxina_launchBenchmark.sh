@@ -25,5 +25,6 @@ feelpp-benchmarking-exec \
     -mc $MACHINE_CONFIG \
     -bc $BENCHMARK_CONFIG \
     -pc $PLOTS_CONFIG \
+    -rc ./tmp_system_entrypoints/meluxina_rfm.py \
     -v \
-    -rfm="-v --exec-order=name --max-retries=2"
+    -rfm="-v --exec-order=name --max-retries=0"
