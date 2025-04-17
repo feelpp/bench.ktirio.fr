@@ -141,7 +141,7 @@ jobs:
             if: ${{ matrix.submit == 'slurm' }}
             run: |
                 srun --partition ${{matrix.submit_partition}} \
-                    --time 02:00:00 \
+                    --time 48:00:00 \
                     --account ${{matrix.project_id}} \
                     --qos ${{matrix.qos}} \
                     --nodes 1 --ntasks 1 --cpus-per-task 1 --ntasks-per-node 1 \
