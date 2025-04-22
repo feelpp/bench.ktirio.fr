@@ -1,0 +1,2584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ReFrame logs :: Ktirio Benchmarks</title>
+    <link rel="canonical" href="https://feelpp.github.io/bench.ktirio.fr/ktirio_benchmarks/logs/karolina/feelpp_kub_cem/SM_Quadrature_Order/2025_04_15T13_50_56Z0200/3fea0a8e.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../../_/css/site.css">
+<link rel="icon" href="../../../../../../_/img/favicon.ico" type="image/x-icon">
+<script>!function(l,p){if(l.protocol!==p&&l.host=="docs.antora.org"){l.protocol=p}else if(/\.gitlab\.io$/.test(l.host)){l.replace(p+"//docs.antora.org"+l.pathname.substr(l.pathname.indexOf("/",1))+l.search+l.hash)}}(location,"https:")</script>
+
+<script src="../../../../../../_/js/vendor/tabs-block-extension.js"></script>
+<script src="../../../../../../_/js/vendor/tabs-block-behavior.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+
+  TeX: {
+      Macros: {
+      bold: ["{\\bf #1}",1],
+      calTh: "{\\mathcal{T}_h}",
+      card: ["{\\operatorname{card}(#1)}",1],
+      card: ["{\\operatorname{card}(#1)}",1],
+      Ck: ["{\\mathcal{C}^{#1}}",1],
+      deformt: ["{\\mathbf{\\varepsilon(#1)}}",1],
+      diam: "{\\operatorname{diam}}",
+      dim: ["{\\operatorname{dim}(#1)}",1],
+      disp: ["{\\mathbf{#1}}",1],
+      domain: "{\\Omega}",
+      ds: "",
+      essinf: "{\\operatorname{ess}\\, \\operatorname{inf}}",
+      F:"{\\mathcal{F}}",
+      geo: "{\\mathrm{geo}}",
+      Ich: ["{\\mathcal{I}^{#1}_{c,h}#2}",2],
+      Id: "{\\mathcal{I}}",
+      Ilag: ["{\\mathcal{I}^{\\mathrm{lag}}_{#1}}",1],
+      jump: ["{[\\![ #1 ]\\!]}",1],
+      n:"{\\mathbf{n}}",
+      Ne: "{N_{\\mathrm{e}}}",
+      Next: "{\\mathrm{n}}",
+      nf: "{n_f}",
+      ngeo: "{n_{\\mathrm{geo}}}",
+      Nma: "{N_{\\mathrm{ma}}}",
+      NN: "{\\mathbb N}",
+      Nno: "{N_{\\mathrm{no}}}",
+      Nso: "{N_{\\mathrm{so}}}",
+      opdim: "{\\operatorname{dim}}",
+      p: "{\\mathrm{p}}",
+      P:"{\\mathcal{P}}",
+      Pch: ["{P^{#1}_{c,h}}",1],
+      Pcho: ["{P^{#1}_{c,h,0}}",1],
+      Pk: ["{\\mathcal{P}^{#1}}",1],
+      poly: ["{\\mathbb{#1}",1],
+      poly: ["{\\mathbb{#1}}",1],
+      prect: ["{\\left\\(#1\\right\\)}",1],
+      q:"{\\mathbf{q}}",
+      Qch: ["{Q^{#1}_{c,h}}",1],
+      Qk: ["{\\mathcal{Q}^{#1}}",1],
+      R: ["{\\mathbb{R}^{#1}}",1],
+      RR: "{\\mathbb R}",
+      set: ["{\\left\\{#1\\right\\}}",1],
+      stresst: ["{\\mathbf{\\sigma(#1)}}",1],
+      T:"{\\mathcal{T}}",
+      tr: "{\\operatorname{tr}}",
+      v:"{\\mathbf{v}}",
+      vertiii: ["\\left\\vert\\kern-0.25ex\\left\\vert\\kern-0.25ex\\left\\vert #1 \\right\\vert\\kern-0.25ex\\right\\vert\\kern-0.25ex\\right\\vert",1]
+  },
+  extensions: ["mhchem.js"] 
+  }
+});
+</script>
+<!--<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML'></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>-->
+
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>-->
+<script>var uiRootPath = '../../../../../../_'</script>
+
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-template-project" style="border-top: 4px solid #9E9E9E">
+        <div class="navbar-brand">
+            <div class="navbar-item feelpp-logo">
+            <a href="https://hidalgo2.eu"><img class="cemosis-logo" src="../../../../../../_/img/logo-hidalgo2-color.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://eurohpc-ju.europa.eu/"><img class="cemosis-logo" src="../../../../../../_/img/logo-eurohpc-ju.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://numpex.org/"><img class="cemosis-logo" src="../../../../../../_/img/logo-numpex.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.economie.gouv.fr/france-2030"><img class="cemosis-logo" src="../../../../../../_/img/logo-france-2030.jpg" alt="Ktirio Benchmarks"></a>
+            </div>  
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="https://docs.feelpp.org/">Documentation Reference</a>
+                </div>
+                <div class="navbar-item">
+                    <a class="navbar-brand"  href="https://www.cemosis.fr">
+                        <a href="https://feelpp.github.io/bench.ktirio.fr"><img class="cemosis-logo" src="../../../../../../_/img/logo-unistra.svg"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://feelpp.github.io/bench.ktirio.fr"><img class="cemosis-logo" src="../../../../../../_/img/logo-cnrs.svg"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="cemosis-logo"  src="../../../../../../_/img/cemosis-logo.svg" alt="Cemosis logo"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<a href="#" class="menu-expand-toggle"></a>
+<div class="nav-container" data-component="ktirio_benchmarks" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../../../index.html">Ktirio Benchmarks</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../../index.html">Ktirio Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../../about.html">About</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Ktirio Benchmarks</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+      <li class="component is-current">
+        <a class="title" href="../../../../../index.html">Ktirio Benchmarks</a>
+      </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+    <a href="../../../../../index.html" class="home-link"></a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../../../index.html">Ktirio Benchmarks</a></li>
+    <li><a href="3fea0a8e.html">ReFrame logs</a></li>
+  </ul>
+</nav>
+
+  
+    <div class="edit-this-page"><a href="https://github.com/feelpp/bench.ktirio.fr/edit/main/docs/modules/ROOT/pages/logs/karolina/feelpp_kub_cem/SM_Quadrature_Order/2025_04_15T13_50_56Z0200/3fea0a8e.adoc">Edit this Page</a></div>
+  
+  <div class="page-downloads">
+  <span class="label">Download as</span>
+  <ul class="download-options">
+    <li>
+      <a onclick="print(this)" href="#" data-toggle="tooltip" data-placement="left" title="Print to PDF"
+         class="pdf-download">
+        <img class="pdf-file-icon icon" src="../../../../../../_/img/pdf.svg"/> .pdf
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">ReFrame logs</h1>
+<div class="sect1">
+<h2 id="_reframe_scheduler_script"><a class="anchor" href="#_reframe_scheduler_script"></a>1. ReFrame scheduler script</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+#SBATCH --job-name="rfm_RegressionTest_3fea0a8e"
+#SBATCH --ntasks=256
+#SBATCH --ntasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --output=rfm_job.out
+#SBATCH --error=rfm_job.err
+#SBATCH --exclusive
+#SBATCH --partition=qcpu
+#SBATCH --account=dd-24-58
+#SBATCH --threads-per-core=1
+#SBATCH --time=0-00:15:0
+module load OpenMPI/4.1.4-GCC-12.2.0
+module load apptainer
+srun --cpus-per-task=1 singularity exec -B"/scratch/project/dd-24-58/actions-runner/_work/bench.ktirio.fr/bench.ktirio.fr/build/reframe/stage/karolina/qcpu/default/RegressionTest_3fea0a8e:/rfm_workdir" --home /scratch/project/dd-24-58/apptainer_home --bind /scratch/project/dd-24-58/inputdataset:/input_data --env OMP_NUM_THREADS=1 /scratch/project/dd-24-58/images_sif/kub_feature-cem_partitioning-sif feelpp_kub_cem --config-files /input_data/kub/idealHeaters.cfg --cem.simulator.sun.filename=/input_data/kub/simulators/Sun.fmu --cem.simulator.lod0.modelisation.maxfloors=10 --cem.preprocessing.dataregistry.directory=/input_data/kub_benchmark/Paris/3km/preprocessing --cem.weather.filename=/input_data/kub/Paris/weather.csv --cem.scenarios.filename=/input_data/kub/scenarios_local/scenarios.json --cem.instance.time.start=0 --cem.instance.time.stop=86400 --cem.instance.time.step=3600 --cem.instance.postprocess.export.visualization.enabled=false --cem.instance.postprocess.export.report.enabled=true --cem.instance.postprocess.export.outputs.csv.enabled=false --cem.instance.postprocess.export.outputs.enabled=false --cem.instance.solar_shading.enabled=true --cem.instance.idealflows.enabled=true --cem.database.directory /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order --directory /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order --cem.instance.solar_shading.ray-tracing.quad-order 5</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reframe_error_log"><a class="anchor" href="#_reframe_error_log"></a>2. ReFrame error log</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+INFO:    Environment variable SINGULARITY_BINDPATH is set, but APPTAINER_BINDPATH is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+WARNING: Could not find any nv files on this host!
+INFO:    Environment variable SINGULARITYENV_LD_PRELOAD is set, but APPTAINERENV_LD_PRELOAD is preferred
+[cn179.karolina.it4i.cz:125003] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124999] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124806] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124381] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124969] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124976] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124382] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124390] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124925] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125008] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124975] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125017] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124400] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124419] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124394] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124982] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124957] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124981] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124997] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124992] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579540] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579544] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579565] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579541] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579536] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579539] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579567] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579538] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579537] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579546] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579661] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579664] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124402] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125039] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125016] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579644] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124973] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579607] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579584] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579635] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124928] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579669] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124399] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125011] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579602] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124420] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579654] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579613] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579657] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124421] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579668] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124801] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579559] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124993] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124916] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579601] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579590] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124395] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579631] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124974] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579574] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579580] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124967] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124986] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579591] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124934] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124935] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579614] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125010] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579598] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579626] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124396] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124425] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579641] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579566] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579645] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124409] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124408] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579557] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124401] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579629] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579648] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124980] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579543] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124389] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124970] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579570] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124988] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579555] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124805] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579573] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124414] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579609] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124996] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579582] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124403] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579571] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124939] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579603] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579594] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124416] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579572] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124987] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579551] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124966] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125012] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124415] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579617] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579595] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579588] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579552] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124977] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124388] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579632] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579634] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124990] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125009] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125006] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124865] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124946] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124961] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579662] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579630] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579636] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579615] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124392] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124962] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579660] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579628] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124418] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579599] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124404] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125001] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579604] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125013] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124800] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579659] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579568] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125004] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579575] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124930] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579577] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579553] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124423] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124379] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579558] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124407] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579658] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124968] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579646] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579651] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579653] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124387] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124926] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124378] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579637] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579579] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579550] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124462] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124386] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579618] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579585] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124384] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125002] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579638] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124380] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124426] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579592] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579581] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124965] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124924] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579576] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124991] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579620] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124978] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579647] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579569] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124391] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125014] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579612] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579549] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124804] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579561] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125015] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124929] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579605] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125018] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579623] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124411] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124417] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579606] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124989] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579600] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579547] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125000] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579560] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125007] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579593] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124985] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579633] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579666] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124427] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124428] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124405] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124422] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579649] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579597] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124385] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579596] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124383] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124799] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579616] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579548] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124951] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124994] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124984] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579655] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579656] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124393] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124803] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579619] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124410] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579624] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124959] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579608] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579640] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124995] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579611] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124802] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579554] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125019] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124459] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124406] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579665] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579643] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579556] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579627] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124983] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124424] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579625] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579650] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579622] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124998] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579639] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:124943] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579587] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579586] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn179.karolina.it4i.cz:125005] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579663] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579667] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579589] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579610] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579652] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579642] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579545] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169
+[cn180.karolina.it4i.cz:2579621] PMIX ERROR: ERROR in file ../../../../../../src/mca/gds/ds12/gds_ds12_lock_pthread.c at line 169</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reframe_output_log"><a class="anchor" href="#_reframe_output_log"></a>3. ReFrame output log</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Reading /input_data/kub/idealHeaters.cfg...
+[ Starting Feel++ ] application City_Energy_Modeling version 0.111.0-preview.120 date 2025-Apr-15
+[feelpp] create Feel++ root repository: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order
+
+[feelpp] create Feel++ geo repository: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/geo
+
+[feelpp] create Feel++ results directory: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256
+
+[feelpp] create Feel++ expressions directory: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/exprs
+
+[feelpp] create Feel++ logs directory: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/logs
+
+ . City_Energy_Modeling files are stored in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256
+ .. logfiles :/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/logs
+[ KUB ] application City_Energy_modeling version 0.5.0
+[CityEnergyModelload] constructor start ...
+[CityEnergyModelload] constructor current done in 0.0359596 s
+[CityEnergyModelload] updateForUse start ...
+[CityEnergyModelload] preprocessing start ...
+[CityEnergyModelload] updatePreprocessingForUse start ...
+[CityEnergyModelload] updatePreprocessingForUse current done in 0.060208 s
+[CityEnergyModelload] preprocessing current done in 0.0638316 s
+[CityEnergyModelload] importPreprocessing start ...
+[loadMesh] Loading mesh in format json+h5: "/input_data/kub_benchmark/Paris/3km/preprocessing/partitioning/np_256/mesh.lod0.json"
+[CityEnergyModelload] importPreprocessing current done in 5.18503 s
+[CityEnergyModelload] scenarios start ...
+[CityEnergyModelload] scenarios current done in 0.882436 s
+[CityEnergyModelload] weather start ...
+[CityEnergyModelload] weather current done in 0.214813 s
+[CityEnergyModelload] sunModel start ...
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_sun exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/sun.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_sun
+[CityEnergyModelload] sunModel current done in 0.660278 s
+[CityEnergyModelload] initBuildingModels start ...
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor0 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor0.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor0
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor1 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor1.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor1
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor2 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor2.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor2
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor3 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor3.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor3
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor4 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor4.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor4
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor5 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor5.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor5
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor6 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor6.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor6
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor7 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor7.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor7
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor8 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor8.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor8
+checking if fmu tmp path /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor9 exists: false
+unzipping /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/simulators/lod0.buildingfloor9.fmu in /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor9
+[CityEnergyModelload] initBuildingModels current done in 11.1003 s
+[CityEnergyModelload] updateForUse current done in 18.1081 s
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16662.2
+  Condition number estimate: 10272.4
+  1-norm of the residual = 56040.7
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  For debugging help refer to the first error message of this type.
+
+  Jacobian inverse norm estimate: 16662.6
+  Condition number estimate: 5285.39
+  1-norm of the residual = 52041.1
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16661.8
+  Condition number estimate: 5221.49
+  1-norm of the residual = 52040.8
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16661
+  Condition number estimate: 5302.12
+  1-norm of the residual = 52034.8
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16661.2
+  Condition number estimate: 5197.36
+  1-norm of the residual = 52033.8
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16660.8
+  Condition number estimate: 5301.01
+  1-norm of the residual = 52033.5
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16660.6
+  Condition number estimate: 11619
+  1-norm of the residual = 52031.9
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16660.2
+  Condition number estimate: 5082.05
+  1-norm of the residual = 52031.7
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16660
+  Condition number estimate: 5142.86
+  1-norm of the residual = 52030.9
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16660.3
+  Condition number estimate: 7176.84
+  1-norm of the residual = 52030.4
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.8
+  Condition number estimate: 6821.09
+  1-norm of the residual = 52029.8
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16660
+  Condition number estimate: 6980.86
+  1-norm of the residual = 52029.2
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.9
+  Condition number estimate: 6910.55
+  1-norm of the residual = 52028.6
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.5
+  Condition number estimate: 6928.05
+  1-norm of the residual = 52028
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.3
+  Condition number estimate: 6908.66
+  1-norm of the residual = 52027.4
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.2
+  Condition number estimate: 6905.05
+  1-norm of the residual = 52026.8
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.1
+  Condition number estimate: 6893.67
+  1-norm of the residual = 52026.2
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.3
+  Condition number estimate: 6886.69
+  1-norm of the residual = 52025.6
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.6
+  Condition number estimate: 6876.91
+  1-norm of the residual = 52025
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16658.8
+  Condition number estimate: 6867.82
+  1-norm of the residual = 52024.4
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16658.7
+  Condition number estimate: 6858.26
+  1-norm of the residual = 52023.8
+
+  Last value of the solution:
+  Last value of the residual:
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  During initialization at time: 0
+  Tag: extended initialization.nonlinear[1]
+
+  Common causes:
+   * The system of equations has no solution - the residual will be above zero.
+[SunModel::SunInstance] creating sun new instance
+[CityEnergyModel::Instance]
+  |-- export outputs enabled: 0
+  |-- export visualization enabled: 0
+  |-- export report enabled: 1
+  |-- export building report enabled: 0
+  |-- solar shading coefficients enabled: building
+  |-- solar shading components: building
+[CityEnergyModelInstance] execute start ...
+execute at time=3600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 0.0279157 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.004236 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.0047154 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.064e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0373392 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 45.895 s
+[CityEnergyModelInstance] execute.simulation current done in 45.9327 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 12.6008 s
+[CityEnergyModelInstance] execute.postprocess current done in 12.6163 s
+execute at time=7200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 3.91e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00160858 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00118629 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 7.61e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00309002 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 1.18311 s
+[CityEnergyModelInstance] execute.simulation current done in 1.18656 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.55071 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.56741 s
+execute at time=10800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00160999 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00116474 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 9.62e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00307291 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.854919 s
+[CityEnergyModelInstance] execute.simulation current done in 0.858363 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.397924 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.41462 s
+execute at time=14400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.81e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00159608 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00117148 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.132e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00308087 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.753138 s
+[CityEnergyModelInstance] execute.simulation current done in 0.756546 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.309803 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.326555 s
+execute at time=18000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.81e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00166997 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00115864 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.102e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00314372 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.753379 s
+[CityEnergyModelInstance] execute.simulation current done in 0.757551 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.312224 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.328459 s
+execute at time=21600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.01e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00166968 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00118124 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.293e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00315998 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.797374 s
+[CityEnergyModelInstance] execute.simulation current done in 0.801508 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.334862 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.351392 s
+execute at time=25200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.9e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00166582 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00116709 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.202e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00313846 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.896168 s
+[CityEnergyModelInstance] execute.simulation current done in 0.899664 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.31142 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.328317 s
+execute at time=28800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.7e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000919592 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.0017493 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 6.72e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00299242 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.940406 s
+[CityEnergyModelInstance] execute.simulation current done in 0.943744 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.481555 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.498302 s
+execute at time=32400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.01e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000918169 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00127428 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.012e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00249164 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.810196 s
+[CityEnergyModelInstance] execute.simulation current done in 0.81305 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.403035 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.419865 s
+execute at time=36000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.51e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00314451 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.48918 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.55819 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 8.05111 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 2.47452 s
+[CityEnergyModelInstance] execute.simulation current done in 10.5266 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.56287 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.57941 s
+execute at time=39600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.81e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00258533 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.14538 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.54909 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 7.69761 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 2.07988 s
+[CityEnergyModelInstance] execute.simulation current done in 9.77782 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.08505 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.10155 s
+execute at time=43200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.91e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00265276 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.02751 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.54964 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 7.5804 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 1.84777 s
+[CityEnergyModelInstance] execute.simulation current done in 9.42848 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.07064 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.0875 s
+execute at time=46800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.51e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00261463 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.02535 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.55249 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 7.58104 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 2.34605 s
+[CityEnergyModelInstance] execute.simulation current done in 9.92742 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.944723 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.961561 s
+execute at time=50400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.81e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00264278 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.0319 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.55278 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 7.5886 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 2.60456 s
+[CityEnergyModelInstance] execute.simulation current done in 10.1935 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.20057 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.21752 s
+execute at time=54000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00261495 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.11135 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.57331 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 7.68852 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 1.86291 s
+[CityEnergyModelInstance] execute.simulation current done in 9.55175 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.37934 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.39621 s
+execute at time=57600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.21e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00261507 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 5.32 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.55237 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 7.87556 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 1.98192 s
+[CityEnergyModelInstance] execute.simulation current done in 9.85845 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.23294 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.24952 s
+execute at time=61200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.81e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00305129 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 6.06379 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 2.55421 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 8.62167 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 2.10052 s
+[CityEnergyModelInstance] execute.simulation current done in 10.7225 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.30946 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.32646 s
+execute at time=64800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.8e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00168321 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00122288 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.342e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00320908 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 1.77054 s
+[CityEnergyModelInstance] execute.simulation current done in 1.77469 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.630047 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.646272 s
+execute at time=68400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.7e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000917237 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.0014141 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.153e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00263914 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.755066 s
+[CityEnergyModelInstance] execute.simulation current done in 0.758641 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.435173 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.452333 s
+execute at time=72000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.01e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000910034 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00145673 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 8.52e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00266164 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.683964 s
+[CityEnergyModelInstance] execute.simulation current done in 0.687596 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.398607 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.415398 s
+execute at time=75600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.8e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000901909 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00177224 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 1.103e-06 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00297654 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.85842 s
+[CityEnergyModelInstance] execute.simulation current done in 0.86173 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.435376 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.452302 s
+execute at time=79200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000899805 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00138076 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 8.12e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00258115 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.833383 s
+[CityEnergyModelInstance] execute.simulation current done in 0.836293 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.593766 s
+[CityEnergyModelInstance] execute.postprocess current done in 0.610679 s
+execute at time=82800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.71e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000900676 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00142162 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 8.12e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00261637 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.921596 s
+[CityEnergyModelInstance] execute.simulation current done in 0.924516 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 2.04708 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.06342 s
+execute at time=86400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.71e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.00143849 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00128106 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 9.52e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00300296 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.97381 s
+[CityEnergyModelInstance] execute.simulation current done in 0.977167 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.29397 s
+[CityEnergyModelInstance] execute.postprocess current done in 1.31089 s
+[CityEnergyModelInstance] execute current done in 172.48 s
+     - This may be caused by initial conditions not being fully specified, check the translation log.
+     - In some cases the event-logic can cause this.
+   * Starting values are too far from the solution, see homotopy in the manual.
+     - In rare cases this could occur at events.
+   * The equations are too discontinuous for the nonlinear solver - the residual will have knees.
+     - Likely caused by over-using noEvent.
+  Especially consider the first two items above when the nonlinear solver fails during initialization.
+
+  To get more information consider the options:
+   * Simulation/Setup/Translation/Generate listing of translated Modelica code in dsmodel.mof
+   * Simulation/Setup/Translation/List non-linear iteration variables
+   * Simulation/Setup/Debug/Store variables after failed initialization
+     - If a failure to solve a nonlinear equation caused failed initialization.
+   * The options under the group Simulation/Setup/Debug/Nonlinear solver diagnostics
+
+  Jacobian inverse norm estimate: 16659.3
+  Condition number estimate: 6850.03
+  1-norm of the residual = 52023.2
+
+  Last value of the solution:
+  Last value of the residual:
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                          City_Energy_Modeling                                                                          |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| +-------------+------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+| | logs        | /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/logs                                                                | |
+| +-------------+------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+| | journal     | /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/journal.json                                                        | |
+| +-------------+------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+| | directories | +--------------------------------------------------------------------------------------------------------------------------------------------------+ | |
+| |             | | /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256                                                                 | | |
+| |             | +--------------------------------------------------------------------------------------------------------------------------------------------------+ | |
+| |             | | /scratch/project/dd-24-58/actions-runner/_work/bench.ktirio.fr/bench.ktirio.fr/build/reframe/stage/karolina/qcpu/default/RegressionTest_3fea0a8e | | |
+| |             | +--------------------------------------------------------------------------------------------------------------------------------------------------+ | |
+| +-------------+------------------------------------------------------------------------------------------------------------------------------------------------------+ |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[ Stopping Feel++ ] application City_Energy_Modeling execution time 209.42s</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feelpp_kub_cem_info"><a class="anchor" href="#_feelpp_kub_cem_info"></a>4. feelpp_kub_cem.INFO</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Log file created at: 2025/04/15 14:23:10
+Running on machine: cn179.karolina.it4i.cz
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0415 14:23:10.861850 124462 environment.cpp:1708] File /input_data/kub_benchmark/Paris/3km/preprocessing/partitioning/np_256/mesh.lod0.json found
+I0415 14:23:10.867656 124462 loadmesh.hpp:246]  Loading mesh in json+h5 format "/input_data/kub_benchmark/Paris/3km/preprocessing/partitioning/np_256/mesh.lod0.json"
+I0415 14:23:12.121124 124462 partitionio.hpp:1134] read stat points 1926149,7503,0
+I0415 14:23:12.121163 124462 partitionio.hpp:1137] read stat elements 3394758,13261,0
+I0415 14:23:12.121166 124462 partitionio.hpp:1140] read stat ghost_elements 722,5,0
+I0415 14:23:12.121170 124462 partitionio.hpp:1143] read stat marked_faces 436453,1707,0
+I0415 14:23:12.121173 124462 partitionio.hpp:1146] read stat marked_edges 0,0,0
+I0415 14:23:12.121176 124462 partitionio.hpp:1149] read stat marked_points 0,0,0
+I0415 14:23:12.121272 124462 partitionio.hpp:1168] loaded points_ids:1x1926149
+I0415 14:23:12.121325 124462 partitionio.hpp:1170] loaded points_coords:1x5778447
+I0415 14:23:12.161770 124462 partitionio.hpp:1267] loaded elements:1x13579032
+I0415 14:23:12.183022 124462 partitionio.hpp:1373] loaded ghost_elements:1x722
+I0415 14:23:12.231181 124462 partitionio.hpp:1568] loaded marked_subentities:1x1309359
+I0415 14:23:12.287358 124462 meshimpl.hpp:1411] We have 1707 faces in the database
+I0415 14:23:12.309721 124462 meshimpl.hpp:1890] update boundary points...
+I0415 14:23:12.309760 124462 meshimpl.hpp:1910] update boundary elements...
+I0415 14:23:16.521292 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_sun using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_sun ,fmuName: sun
+I0415 14:23:17.083518 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:17.083627 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:17.269071 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor0 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor0 ,fmuName: lod0.buildingfloor0
+I0415 14:23:17.805531 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:17.805701 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:18.008894 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor1 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor1 ,fmuName: lod0.buildingfloor1
+I0415 14:23:18.606542 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:18.606707 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:18.826468 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor2 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor2 ,fmuName: lod0.buildingfloor2
+I0415 14:23:19.383522 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:19.383689 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:19.693444 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor3 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor3 ,fmuName: lod0.buildingfloor3
+I0415 14:23:20.372529 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:20.372701 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:20.710969 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor4 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor4 ,fmuName: lod0.buildingfloor4
+I0415 14:23:21.506522 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:21.506698 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:21.817394 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor5 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor5 ,fmuName: lod0.buildingfloor5
+I0415 14:23:22.504524 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:22.504701 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:22.985378 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor6 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor6 ,fmuName: lod0.buildingfloor6
+I0415 14:23:23.717530 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:23.717707 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:24.260653 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor7 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor7 ,fmuName: lod0.buildingfloor7
+I0415 14:23:24.953519 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:24.953694 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:25.569949 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor8 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor8 ,fmuName: lod0.buildingfloor8
+I0415 14:23:26.377521 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:26.377697 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0415 14:23:26.971534 124462 mpifmu.cpp:149] [mpifmu] unzipPath=/scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor9 using unzipPath: /scratch/project/dd-24-58/apptainer_home/kub/3fea0a8e/SM_Quadrature_Order/np_256/fmus/fmi4cpp_lod0.buildingfloor9 ,fmuName: lod0.buildingfloor9
+I0415 14:23:27.692521 124462 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0415 14:23:27.692699 124462 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+W0415 14:23:28.322111 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69884202 not simulated
+W0415 14:23:28.357164 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69874674 not simulated
+W0415 14:23:28.852308 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69874830 not simulated
+W0415 14:23:29.625980 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69884187 not simulated
+W0415 14:23:34.799397 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69049389 not simulated
+W0415 14:23:34.805517 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69872817 not simulated
+W0415 14:23:37.434513 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69065523 not simulated
+W0415 14:23:37.796241 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69884192 not simulated
+I0415 14:23:41.552768 124462 worldcomm.cpp:895] [rank 0] [DofTable::build] starts, has mesh support: false
+I0415 14:23:41.564440 124462 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] starts, dof_indices empty: true
+I0415 14:23:41.564450 124462 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] allocation done
+I0415 14:23:41.564621 124462 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap]  n_elts =  13256 on processor 0
+I0415 14:23:41.569438 124462 worldcomm.cpp:895] [rank 0] [builddofmap - 0] dof generation hasNoElt : false theFirstDF: 0 thelastDof: 13255
+I0415 14:23:41.569443 124462 worldcomm.cpp:895] [rank 0] [builddofmap - 0] gather discontinuous dof info hasNoElt : false theFirstDF: 0 thelastDof: 13255
+I0415 14:23:41.573575 124462 worldcomm.cpp:895] [rank 0] [DofTable::buildGhostDofMap rank=0] starts. hasMeshSupport: false
+I0415 14:23:41.584656 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.584687 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.584758 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.584829 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.584906 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.584977 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.585058 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.585152 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.585253 124462 element_impl.hpp:199] creating element u : u
+I0415 14:23:41.591768 124462 exporterimpl.hpp:219] [Exporter] format :  ensightgold
+I0415 14:23:41.591781 124462 exporterimpl.hpp:220] [Exporter] N      :  1
+I0415 14:26:36.878791 124462 environment.cpp:2423] Environment::clearSomeMemory before: PETSC get current memory usage (resident memory): 1.4785e+06  KBytes 1478.5  MBytes 1.4785 GBytes
+I0415 14:26:36.878943 124462 environment.cpp:2428] Environment::clearSomeMemory before: PETSC get current PETSC Malloc usage: 0  KBytes 0 MBytes 0 GBytes
+I0415 14:26:36.878953 124462 environment.cpp:2430] Environment::clearSomeMemory before: PETSC get maximum PETSC Malloc usage(largest memory ever used so far): 0  KBytes 0 MBytes 0 GBytes
+I0415 14:26:36.878988 124462 environment.cpp:2423] Environment::clearSomeMemory after: PETSC get current memory usage (resident memory): 1.4785e+06  KBytes 1478.5  MBytes 1.4785 GBytes
+I0415 14:26:36.878994 124462 environment.cpp:2428] Environment::clearSomeMemory after: PETSC get current PETSC Malloc usage: 0  KBytes 0 MBytes 0 GBytes
+I0415 14:26:36.878998 124462 environment.cpp:2430] Environment::clearSomeMemory after: PETSC get maximum PETSC Malloc usage(largest memory ever used so far): 0  KBytes 0 MBytes 0 GBytes</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feelpp_kub_cem_warning"><a class="anchor" href="#_feelpp_kub_cem_warning"></a>5. feelpp_kub_cem.WARNING</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Log file created at: 2025/04/15 14:23:28
+Running on machine: cn179.karolina.it4i.cz
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0415 14:23:28.322111 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69884202 not simulated
+W0415 14:23:28.357164 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69874674 not simulated
+W0415 14:23:28.852308 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69874830 not simulated
+W0415 14:23:29.625980 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69884187 not simulated
+W0415 14:23:34.799397 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69049389 not simulated
+W0415 14:23:34.805517 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69872817 not simulated
+W0415 14:23:37.434513 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69065523 not simulated
+W0415 14:23:37.796241 124462 buildingmodel.cpp:45] [BuildingModel::Instance] building instance 69884192 not simulated</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer" style="border-top: 2px solid #e9e9e9; background-color: #fafafa; padding-bottom: 2em; padding-top: 2em;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 0.5em;">
+        <div>
+            <a href="https://www.cemosis.fr">
+                <img src="../../../../../../_/img/cemosis-logo.svg" alt="Cemosis logo" height="50">
+            </a>
+        </div>
+        <span style="font-size: 0.8rem; color: #9e9e9e">© 2025 <a href="https://www.cemosis.fr" style="text-decoration: underline;">Cemosis</a>, Université de Strasbourg</span>
+    </div>
+</footer>
+<script id="site-script" src="../../../../../../_/js/site.js" data-ui-root-path="../../../../../../_"></script>
+
+
+<script async src="../../../../../../_/js/vendor/fontawesome-icon-defs.js"></script>
+<script async src="../../../../../../_/js/vendor/fontawesome.js"></script>
+<script async src="../../../../../../_/js/vendor/highlight.js"></script>
+
+
+<script type="text/javascript">
+function toggleFullScreen() {
+   var doc = window.document;
+   var docEl = doc.documentElement;
+
+   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+       requestFullScreen.call(docEl);
+   }
+   else {
+       cancelFullScreen.call(doc);
+   }
+}
+</script>
+  </body>
+</html>

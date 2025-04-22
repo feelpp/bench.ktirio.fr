@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ReFrame logs :: Ktirio Benchmarks</title>
+    <link rel="canonical" href="https://feelpp.github.io/bench.ktirio.fr/ktirio_benchmarks/logs/meluxina/feelpp_kub_cem/Paris_partitioned/2025_04_17T17_24_32Z0200/3bb928e4.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../../_/css/site.css">
+<link rel="icon" href="../../../../../../_/img/favicon.ico" type="image/x-icon">
+<script>!function(l,p){if(l.protocol!==p&&l.host=="docs.antora.org"){l.protocol=p}else if(/\.gitlab\.io$/.test(l.host)){l.replace(p+"//docs.antora.org"+l.pathname.substr(l.pathname.indexOf("/",1))+l.search+l.hash)}}(location,"https:")</script>
+
+<script src="../../../../../../_/js/vendor/tabs-block-extension.js"></script>
+<script src="../../../../../../_/js/vendor/tabs-block-behavior.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+
+  TeX: {
+      Macros: {
+      bold: ["{\\bf #1}",1],
+      calTh: "{\\mathcal{T}_h}",
+      card: ["{\\operatorname{card}(#1)}",1],
+      card: ["{\\operatorname{card}(#1)}",1],
+      Ck: ["{\\mathcal{C}^{#1}}",1],
+      deformt: ["{\\mathbf{\\varepsilon(#1)}}",1],
+      diam: "{\\operatorname{diam}}",
+      dim: ["{\\operatorname{dim}(#1)}",1],
+      disp: ["{\\mathbf{#1}}",1],
+      domain: "{\\Omega}",
+      ds: "",
+      essinf: "{\\operatorname{ess}\\, \\operatorname{inf}}",
+      F:"{\\mathcal{F}}",
+      geo: "{\\mathrm{geo}}",
+      Ich: ["{\\mathcal{I}^{#1}_{c,h}#2}",2],
+      Id: "{\\mathcal{I}}",
+      Ilag: ["{\\mathcal{I}^{\\mathrm{lag}}_{#1}}",1],
+      jump: ["{[\\![ #1 ]\\!]}",1],
+      n:"{\\mathbf{n}}",
+      Ne: "{N_{\\mathrm{e}}}",
+      Next: "{\\mathrm{n}}",
+      nf: "{n_f}",
+      ngeo: "{n_{\\mathrm{geo}}}",
+      Nma: "{N_{\\mathrm{ma}}}",
+      NN: "{\\mathbb N}",
+      Nno: "{N_{\\mathrm{no}}}",
+      Nso: "{N_{\\mathrm{so}}}",
+      opdim: "{\\operatorname{dim}}",
+      p: "{\\mathrm{p}}",
+      P:"{\\mathcal{P}}",
+      Pch: ["{P^{#1}_{c,h}}",1],
+      Pcho: ["{P^{#1}_{c,h,0}}",1],
+      Pk: ["{\\mathcal{P}^{#1}}",1],
+      poly: ["{\\mathbb{#1}",1],
+      poly: ["{\\mathbb{#1}}",1],
+      prect: ["{\\left\\(#1\\right\\)}",1],
+      q:"{\\mathbf{q}}",
+      Qch: ["{Q^{#1}_{c,h}}",1],
+      Qk: ["{\\mathcal{Q}^{#1}}",1],
+      R: ["{\\mathbb{R}^{#1}}",1],
+      RR: "{\\mathbb R}",
+      set: ["{\\left\\{#1\\right\\}}",1],
+      stresst: ["{\\mathbf{\\sigma(#1)}}",1],
+      T:"{\\mathcal{T}}",
+      tr: "{\\operatorname{tr}}",
+      v:"{\\mathbf{v}}",
+      vertiii: ["\\left\\vert\\kern-0.25ex\\left\\vert\\kern-0.25ex\\left\\vert #1 \\right\\vert\\kern-0.25ex\\right\\vert\\kern-0.25ex\\right\\vert",1]
+  },
+  extensions: ["mhchem.js"] 
+  }
+});
+</script>
+<!--<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML'></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>-->
+
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>-->
+<script>var uiRootPath = '../../../../../../_'</script>
+
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-template-project" style="border-top: 4px solid #9E9E9E">
+        <div class="navbar-brand">
+            <div class="navbar-item feelpp-logo">
+            <a href="https://hidalgo2.eu"><img class="cemosis-logo" src="../../../../../../_/img/logo-hidalgo2-color.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://eurohpc-ju.europa.eu/"><img class="cemosis-logo" src="../../../../../../_/img/logo-eurohpc-ju.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://numpex.org/"><img class="cemosis-logo" src="../../../../../../_/img/logo-numpex.png" alt="Ktirio Benchmarks"></a>            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.economie.gouv.fr/france-2030"><img class="cemosis-logo" src="../../../../../../_/img/logo-france-2030.jpg" alt="Ktirio Benchmarks"></a>
+            </div>  
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="https://docs.feelpp.org/">Documentation Reference</a>
+                </div>
+                <div class="navbar-item">
+                    <a class="navbar-brand"  href="https://www.cemosis.fr">
+                        <a href="https://feelpp.github.io/bench.ktirio.fr"><img class="cemosis-logo" src="../../../../../../_/img/logo-unistra.svg"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://feelpp.github.io/bench.ktirio.fr"><img class="cemosis-logo" src="../../../../../../_/img/logo-cnrs.svg"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img class="cemosis-logo"  src="../../../../../../_/img/cemosis-logo.svg" alt="Cemosis logo"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<a href="#" class="menu-expand-toggle"></a>
+<div class="nav-container" data-component="ktirio_benchmarks" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../../../index.html">Ktirio Benchmarks</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../../index.html">Ktirio Benchmarks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../../about.html">About</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Ktirio Benchmarks</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+      <li class="component is-current">
+        <a class="title" href="../../../../../index.html">Ktirio Benchmarks</a>
+      </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+    <a href="../../../../../index.html" class="home-link"></a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../../../index.html">Ktirio Benchmarks</a></li>
+    <li><a href="3bb928e4.html">ReFrame logs</a></li>
+  </ul>
+</nav>
+
+  
+    <div class="edit-this-page"><a href="https://github.com/feelpp/bench.ktirio.fr/edit/main/docs/modules/ROOT/pages/logs/meluxina/feelpp_kub_cem/Paris_partitioned/2025_04_17T17_24_32Z0200/3bb928e4.adoc">Edit this Page</a></div>
+  
+  <div class="page-downloads">
+  <span class="label">Download as</span>
+  <ul class="download-options">
+    <li>
+      <a onclick="print(this)" href="#" data-toggle="tooltip" data-placement="left" title="Print to PDF"
+         class="pdf-download">
+        <img class="pdf-file-icon icon" src="../../../../../../_/img/pdf.svg"/> .pdf
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">ReFrame logs</h1>
+<div class="sect1">
+<h2 id="_reframe_scheduler_script"><a class="anchor" href="#_reframe_scheduler_script"></a>1. ReFrame scheduler script</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/bash
+#SBATCH --job-name="rfm_RegressionTest_3bb928e4"
+#SBATCH --ntasks=256
+#SBATCH --ntasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --output=rfm_job.out
+#SBATCH --error=rfm_job.err
+#SBATCH --exclusive
+#SBATCH --partition=cpu
+#SBATCH --account=p200687
+#SBATCH --qos=default
+#SBATCH --threads-per-core=1
+#SBATCH --time=0-00:30:0
+module load env/release/2024.1
+module load Apptainer/1.3.6-GCCcore-13.3.0
+export INSNAME=feelpp_kub_cem_instance
+export APPTAINER_IMAGE=/mnt/tier1/project/p200506/kub/sifs/kub_feature-cem_partitioning-sif
+srun -N ${SLURM_NNODES} --ntasks-per-node 1 -c 1 apptainer instance start --bind /mnt/tier1/project/p200506/kub/apptainer_home --bind /mnt/tier1/project/p200506/kub/inputdataset/:/input_data ${APPTAINER_IMAGE} ${INSNAME} &amp;
+sleep 5
+module load OpenMPI/5.0.3-GCC-13.3.0
+export PMIX_MCA_psec=^munge
+srun --cpus-per-task=1 apptainer exec -B"/mnt/tier2/project/p200687/cemosis/actions-runner-1/_work/bench.ktirio.fr/bench.ktirio.fr/build/reframe/stage/meluxina/cpu/default/RegressionTest_3bb928e4:/rfm_workdir" --bind /mnt/tier1/project/p200506/kub/apptainer_home --bind /mnt/tier1/project/p200506/kub/inputdataset:/input_data --env OMP_NUM_THREADS=1 instance://feelpp_kub_cem_instance feelpp_kub_cem --config-files /input_data/kub/idealHeaters.cfg --cem.simulator.sun.filename=/input_data/kub/simulators/Sun.fmu --cem.simulator.lod0.modelisation.maxfloors=10 --cem.preprocessing.dataregistry.directory=/input_data/kub_benchmark/Paris/1km/preprocessing --cem.weather.filename=/input_data/kub/Paris/weather.csv --cem.scenarios.filename=/input_data/kub/scenarios_local/scenarios.json --cem.instance.time.start=0 --cem.instance.time.stop=86400 --cem.instance.time.step=3600 --cem.instance.postprocess.export.visualization.enabled=true --cem.instance.postprocess.export.report.enabled=true --cem.instance.postprocess.export.outputs.enabled=true --cem.instance.solar_shading.enabled=true --cem.instance.idealflows.enabled=true --cem.database.directory /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned --directory /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned --cem.instance.solar_shading.ray-tracing.quad-order 3</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reframe_error_log"><a class="anchor" href="#_reframe_error_log"></a>2. ReFrame error log</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Lmod is automatically replacing "env/staging/2024.1" with "env/release/2024.1".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) Apptainer/1.3.6-GCCcore-13.3.0     9) bzip2/1.0.8-GCCcore-13.3.0
+  2) GCCcore/13.3.0                    10) gocryptfs/2.4.0-GCCcore-13.3.0
+  3) OpenSSL/3                         11) libffi/3.4.5-GCCcore-13.3.0
+  4) Python/3.12.3-GCCcore-13.3.0      12) libreadline/8.2-GCCcore-13.3.0
+  5) SQLite/3.45.3-GCCcore-13.3.0      13) ncurses/6.5-GCCcore-13.3.0
+  6) Tcl/8.6.14-GCCcore-13.3.0         14) squashfuse/0.5.2-GCCcore-13.3.0
+  7) XZ/5.4.5-GCCcore-13.3.0           15) zlib/1.3.1-GCCcore-13.3.0
+  8) binutils/2.42-GCCcore-13.3.0
+
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    instance started successfully
+INFO:    instance started successfully</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reframe_output_log"><a class="anchor" href="#_reframe_output_log"></a>3. ReFrame output log</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Reading /input_data/kub/idealHeaters.cfg...
+[ Starting Feel++ ] application City_Energy_Modeling version 0.111.0-preview.120 date 2025-Apr-17
+[feelpp] create Feel++ root repository: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned
+
+[feelpp] create Feel++ geo repository: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/geo
+
+[feelpp] create Feel++ results directory: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256
+
+[feelpp] create Feel++ expressions directory: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/exprs
+
+[feelpp] create Feel++ logs directory: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/logs
+
+ . City_Energy_Modeling files are stored in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256
+ .. logfiles :/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/logs
+[ KUB ] application City_Energy_modeling version 0.5.0
+[CityEnergyModelload] constructor start ...
+[CityEnergyModelload] constructor current done in 0.00227511 s
+[CityEnergyModelload] updateForUse start ...
+[CityEnergyModelload] preprocessing start ...
+[CityEnergyModelload] updatePreprocessingForUse start ...
+[CityEnergyModelload] updatePreprocessingForUse current done in 0.00953703 s
+[CityEnergyModelload] preprocessing current done in 0.0190164 s
+[CityEnergyModelload] importPreprocessing start ...
+[loadMesh] Loading mesh in format json+h5: "/input_data/kub_benchmark/Paris/1km/preprocessing/partitioning/np_256/mesh.lod0.json"
+[CityEnergyModelload] importPreprocessing current done in 0.967876 s
+[CityEnergyModelload] scenarios start ...
+[CityEnergyModelload] scenarios current done in 0.0934776 s
+[CityEnergyModelload] weather start ...
+[CityEnergyModelload] weather current done in 0.081079 s
+[CityEnergyModelload] sunModel start ...
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_sun exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/sun.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_sun
+[CityEnergyModelload] sunModel current done in 0.0725207 s
+[CityEnergyModelload] initBuildingModels start ...
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor0 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor0.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor0
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor1 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor1.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor1
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor2 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor2.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor2
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor3 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor3.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor3
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor4 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor4.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor4
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor5 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor5.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor5
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor6 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor6.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor6
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor7 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor7.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor7
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor8 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor8.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor8
+checking if fmu tmp path /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor9 exists: false
+unzipping /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/simulators/lod0.buildingfloor9.fmu in /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor9
+[CityEnergyModelload] initBuildingModels current done in 3.59525 s
+[CityEnergyModelload] updateForUse current done in 4.82953 s
+[SunModel::SunInstance] creating sun new instance
+[CityEnergyModel::Instance]
+  |-- export outputs enabled: 1
+  |-- export visualization enabled: 1
+  |-- export report enabled: 1
+  |-- export building report enabled: 0
+  |-- solar shading coefficients enabled: building
+  |-- solar shading components: building
+[CityEnergyModelInstance] execute start ...
+execute at time=3600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 0.00278477 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000606843 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00141927 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 5.3e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00502944 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 4.10074 s
+[CityEnergyModelInstance] execute.simulation current done in 4.1061 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 1.74901 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.17383 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 2.30496 s
+[CityEnergyModelInstance] execute.postprocess current done in 4.22953 s
+execute at time=7200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 5.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000694043 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00172251 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00254208 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.102539 s
+[CityEnergyModelInstance] execute.simulation current done in 0.105414 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.227063 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.209268 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.92514 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.36333 s
+execute at time=10800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000684433 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00175017 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.4e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0109977 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.128368 s
+[CityEnergyModelInstance] execute.simulation current done in 0.139678 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0756607 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.180446 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.85797 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.11594 s
+execute at time=14400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000685453 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00181436 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.1e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0035476 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0748537 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0787678 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.036972 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.172687 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.90033 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.11181 s
+execute at time=18000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.4e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000682084 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00184142 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 3.8e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00265563 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0729204 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0759534 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0381263 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.176594 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.92797 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.14447 s
+execute at time=21600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000694453 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00179552 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 5.9e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00261195 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0684977 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0715114 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0625451 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.172743 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.92524 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.16246 s
+execute at time=25200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000695963 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00187516 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.3e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00269932 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0856556 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0887292 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0653461 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.200352 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.86163 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.12916 s
+execute at time=28800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.5e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000699523 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00176006 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 3.9e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00264834 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.164594 s
+[CityEnergyModelInstance] execute.simulation current done in 0.16755 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0785894 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.192819 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.85136 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.12459 s
+execute at time=32400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.2e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000691033 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00181306 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.2e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00262065 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0649973 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0679253 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0722316 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.182103 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.83027 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.08652 s
+execute at time=36000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000888924 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.35345 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.245691 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.600235 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.231827 s
+[CityEnergyModelInstance] execute.simulation current done in 0.832366 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.153705 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.184086 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.89346 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.23315 s
+execute at time=39600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000873014 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.344054 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.24593 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.591061 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.171145 s
+[CityEnergyModelInstance] execute.simulation current done in 0.762595 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.129594 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.201828 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.97058 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.3039 s
+execute at time=43200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 2.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000888115 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.346665 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.245181 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.601775 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.153495 s
+[CityEnergyModelInstance] execute.simulation current done in 0.75557 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.135489 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.178055 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 2.00395 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.31937 s
+execute at time=46800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000872984 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.337021 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.246173 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.584802 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.185535 s
+[CityEnergyModelInstance] execute.simulation current done in 0.770634 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.145207 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.176878 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.95013 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.27408 s
+execute at time=50400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000874564 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.339706 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.245772 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.5866 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.19987 s
+[CityEnergyModelInstance] execute.simulation current done in 0.786807 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.164141 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.181671 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.91057 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.25825 s
+execute at time=54000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.4e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000848564 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.34316 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.244798 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.589054 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.16887 s
+[CityEnergyModelInstance] execute.simulation current done in 0.758283 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.163449 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.18967 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.86691 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.22195 s
+execute at time=57600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.5e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000883794 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.35803 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.248731 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.607911 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.175362 s
+[CityEnergyModelInstance] execute.simulation current done in 0.783588 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.18237 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.198905 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 2.00887 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.39203 s
+execute at time=61200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.4e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000871884 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.414678 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 0.245907 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.661676 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.194051 s
+[CityEnergyModelInstance] execute.simulation current done in 0.856019 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.144887 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.197637 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 2.05183 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.39624 s
+execute at time=64800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000678394 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00181994 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 3.6e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0106519 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.122548 s
+[CityEnergyModelInstance] execute.simulation current done in 0.133505 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.143232 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.189366 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.94094 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.2755 s
+execute at time=68400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000674213 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00180513 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.2e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0025951 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0768657 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0798019 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0550507 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.18147 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.99766 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.2361 s
+execute at time=72000
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.5e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000670913 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00183154 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.8e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00261731 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.154029 s
+[CityEnergyModelInstance] execute.simulation current done in 0.156982 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0636559 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.172162 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.95277 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.19048 s
+execute at time=75600
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.1e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000693383 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00187287 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 3.7e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00268416 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0870748 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0900965 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.0507224 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.180944 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.87364 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.10727 s
+execute at time=79200
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.6e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000672713 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00182808 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 3.5e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00262745 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0825125 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0854842 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.157755 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.186695 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 1.8806 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.22694 s
+execute at time=82800
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000700924 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00183441 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 3.8e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.0027086 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.0944117 s
+[CityEnergyModelInstance] execute.simulation current done in 0.0974464 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.295929 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.187697 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 2.0437 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.52925 s
+execute at time=86400
+[CityEnergyModelInstance] execute.simulation start ...
+[CityEnergyModelInstance] execute.simulation.solarMasks start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh start ...
+[CityEnergyModelInstance] updateSolarPosition : create bvh current done in 1.3e-07 s
+[CityEnergyModelInstance] updateSolarPosition : create rays start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays current done in 0.000680763 s
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect start ...
+[CityEnergyModelInstance] updateSolarPosition : create rays intersect current done in 0.00173233 s
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients start ...
+[CityEnergyModelInstance] updateSolarPosition :  update solar shading coefficients current done in 4.2e-07 s
+[CityEnergyModelInstance] execute.simulation.solarMasks current done in 0.00253149 s
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep start ...
+[CityEnergyModelInstance] execute.simulation.buildingExecuteStep current done in 0.11391 s
+[CityEnergyModelInstance] execute.simulation current done in 0.116789 s
+[CityEnergyModelInstance] execute.postprocess start ...
+[CityEnergyModelInstance] report start ...
+[CityEnergyModelInstance] report current done in 0.193766 s
+[CityEnergyModelInstance] exportOutputs start ...
+[CityEnergyModelInstance] exportOutputs current done in 0.189976 s
+[CityEnergyModelInstance] visualization start ...
+[CityEnergyModelInstance] visualization current done in 2.04612 s
+[CityEnergyModelInstance] execute.postprocess current done in 2.43172 s
+[CityEnergyModelInstance] execute current done in 67.832 s
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                               City_Energy_Modeling                                                                               |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| +-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+| | logs        | /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/logs                                                                       | |
+| +-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+| | journal     | /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/journal.json                                                               | |
+| +-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+ |
+| | directories | +------------------------------------------------------------------------------------------------------------------------------------------------------------+ | |
+| |             | | /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256                                                                        | | |
+| |             | +------------------------------------------------------------------------------------------------------------------------------------------------------------+ | |
+| |             | | /mnt/tier2/project/p200687/cemosis/actions-runner-1/_work/bench.ktirio.fr/bench.ktirio.fr/build/reframe/stage/meluxina/cpu/default/RegressionTest_3bb928e4 | | |
+| |             | +------------------------------------------------------------------------------------------------------------------------------------------------------------+ | |
+| +-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+ |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[ Stopping Feel++ ] application City_Energy_Modeling execution time 75.5446s</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feelpp_kub_cem_info"><a class="anchor" href="#_feelpp_kub_cem_info"></a>4. feelpp_kub_cem.INFO</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Log file created at: 2025/04/17 17:35:23
+Running on machine: mel0198
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0417 17:35:23.047494    33 environment.cpp:1708] File /input_data/kub_benchmark/Paris/1km/preprocessing/partitioning/np_256/mesh.lod0.json found
+I0417 17:35:23.051004    33 loadmesh.hpp:246]  Loading mesh in json+h5 format "/input_data/kub_benchmark/Paris/1km/preprocessing/partitioning/np_256/mesh.lod0.json"
+I0417 17:35:23.264061    33 partitionio.hpp:1134] read stat points 185511,722,0
+I0417 17:35:23.264071    33 partitionio.hpp:1137] read stat elements 323322,1260,0
+I0417 17:35:23.264074    33 partitionio.hpp:1140] read stat ghost_elements 182,0,0
+I0417 17:35:23.264075    33 partitionio.hpp:1143] read stat marked_faces 57343,228,0
+I0417 17:35:23.264077    33 partitionio.hpp:1146] read stat marked_edges 0,0,0
+I0417 17:35:23.264079    33 partitionio.hpp:1149] read stat marked_points 0,0,0
+I0417 17:35:23.264140    33 partitionio.hpp:1168] loaded points_ids:1x185511
+I0417 17:35:23.264175    33 partitionio.hpp:1170] loaded points_coords:1x556533
+I0417 17:35:23.268060    33 partitionio.hpp:1267] loaded elements:1x1293288
+I0417 17:35:23.271775    33 partitionio.hpp:1373] loaded ghost_elements:1x182
+I0417 17:35:23.272666    33 partitionio.hpp:1568] loaded marked_subentities:1x172029
+I0417 17:35:23.274699    33 meshimpl.hpp:1411] We have 228 faces in the database
+I0417 17:35:23.281515    33 meshimpl.hpp:1890] update boundary points...
+I0417 17:35:23.281520    33 meshimpl.hpp:1910] update boundary elements...
+I0417 17:35:23.812878    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_sun using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_sun ,fmuName: sun
+I0417 17:35:23.873175    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:23.873369    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:23.890616    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor0 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor0 ,fmuName: lod0.buildingfloor0
+I0417 17:35:23.965907    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:23.966128    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:24.028007    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor1 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor1 ,fmuName: lod0.buildingfloor1
+I0417 17:35:24.108106    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:24.108381    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:24.211861    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor2 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor2 ,fmuName: lod0.buildingfloor2
+I0417 17:35:24.300518    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:24.300799    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:24.440923    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor3 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor3 ,fmuName: lod0.buildingfloor3
+I0417 17:35:24.539057    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:24.539356    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:24.715435    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor4 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor4 ,fmuName: lod0.buildingfloor4
+I0417 17:35:24.820773    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:24.821069    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:25.042737    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor5 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor5 ,fmuName: lod0.buildingfloor5
+I0417 17:35:25.156502    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:25.156774    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:25.416181    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor6 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor6 ,fmuName: lod0.buildingfloor6
+I0417 17:35:25.538141    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:25.538419    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:25.865566    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor7 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor7 ,fmuName: lod0.buildingfloor7
+I0417 17:35:26.003791    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:26.004060    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:26.351347    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor8 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor8 ,fmuName: lod0.buildingfloor8
+I0417 17:35:26.491799    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:26.492085    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:26.886487    33 mpifmu.cpp:149] [mpifmu] unzipPath=/mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor9 using unzipPath: /mnt/tier1/project/p200506/kub/apptainer_home/kub/3bb928e4/Paris_partitioned/np_256/fmus/fmi4cpp_lod0.buildingfloor9 ,fmuName: lod0.buildingfloor9
+I0417 17:35:27.035048    33 mpifmu.cpp:183] [mpifmu] Using input weather file
+I0417 17:35:27.035341    33 mpifmu.cpp:201] [mpifmu] uncompressed fmu ready for consumption
+I0417 17:35:28.943413    33 worldcomm.cpp:895] [rank 0] [DofTable::build] starts, has mesh support: false
+I0417 17:35:28.943516    33 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] starts, dof_indices empty: true
+I0417 17:35:28.943518    33 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] allocation done
+I0417 17:35:28.943533    33 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap]  n_elts =  1260 on processor 0
+I0417 17:35:28.943773    33 worldcomm.cpp:895] [rank 0] [builddofmap - 0] dof generation hasNoElt : false theFirstDF: 0 thelastDof: 1259
+I0417 17:35:28.943774    33 worldcomm.cpp:895] [rank 0] [builddofmap - 0] gather discontinuous dof info hasNoElt : false theFirstDF: 0 thelastDof: 1259
+I0417 17:35:28.945724    33 worldcomm.cpp:895] [rank 0] [DofTable::buildGhostDofMap rank=0] starts. hasMeshSupport: false
+I0417 17:35:28.949255    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949261    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949268    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949271    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949275    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949277    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949280    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949460    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949463    33 element_impl.hpp:199] creating element u : u
+I0417 17:35:28.949630    33 exporterimpl.hpp:219] [Exporter] format :  ensightgold
+I0417 17:35:28.949632    33 exporterimpl.hpp:220] [Exporter] N      :  1
+I0417 17:35:35.247813    33 worldcomm.cpp:895] [rank 0] [DofTable::build] starts, has mesh support: false
+I0417 17:35:35.247910    33 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] starts, dof_indices empty: true
+I0417 17:35:35.247913    33 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap] allocation done
+I0417 17:35:35.247923    33 worldcomm.cpp:895] [rank 0] [DofTable::buildDofMap]  n_elts =  1260 on processor 0
+I0417 17:35:35.248206    33 worldcomm.cpp:895] [rank 0] [builddofmap - 0] dof generation hasNoElt : false theFirstDF: 0 thelastDof: 1259
+I0417 17:35:35.248209    33 worldcomm.cpp:895] [rank 0] [builddofmap - 0] gather discontinuous dof info hasNoElt : false theFirstDF: 0 thelastDof: 1259
+I0417 17:35:35.249787    33 worldcomm.cpp:895] [rank 0] [DofTable::buildGhostDofMap rank=0] starts. hasMeshSupport: false
+I0417 17:35:35.253093    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:35.254734    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:35.255551    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:35.256726    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:35.257686    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:35.258620    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:35.259541    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:35.260469    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:35.261389    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:35.262300    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:35.263226    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:35.412910    33 exporterensightgold_impl.hpp:1250] writing part 1
+I0417 17:35:35.478011    33 exporterensightgold_impl.hpp:1250] writing part 2
+I0417 17:35:35.500213    33 exporterensightgold_impl.hpp:1250] writing part 3
+I0417 17:35:35.649107    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:35.649112    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:38.096374    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:38.096530    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:38.096544    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:38.097680    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:38.098637    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:38.099583    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:38.100520    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:38.101444    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:38.102372    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:38.103318    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:38.104267    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:38.105198    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:38.105202    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:40.419159    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:40.419317    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:40.419342    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:40.420491    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:40.421447    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:40.422405    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:40.423374    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:40.424301    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:40.425246    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:40.426182    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:40.427135    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:40.428085    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:40.428088    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:42.567142    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:42.567323    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:42.567355    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:42.568540    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:42.569522    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:42.570489    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:42.571449    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:42.572408    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:42.573385    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:42.574337    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:42.575295    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:42.576222    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:42.576224    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:44.760268    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:44.760439    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:44.760452    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:44.761602    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:44.762560    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:44.763511    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:44.764453    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:44.765396    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:44.766340    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:44.767264    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:44.768227    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:44.769168    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:44.769170    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:46.997028    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:46.997184    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:46.997198    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:46.998391    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:46.999361    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:47.000306    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:47.001255    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:47.002213    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:47.003173    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:47.004133    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:47.005072    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:47.006026    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:47.009492    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:49.278772    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:49.278925    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:49.278939    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:49.280115    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:49.281090    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:49.282050    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:49.283011    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:49.283973    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:49.284938    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:49.285883    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:49.286859    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:49.287804    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:49.287806    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:51.580961    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:51.581117    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:51.581131    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:51.582319    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:51.583290    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:51.584275    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:51.585237    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:51.586182    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:51.587131    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:51.588176    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:51.589143    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:51.590092    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:51.590094    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:53.756410    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:53.757314    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:53.757349    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:53.758606    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:53.759617    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:53.760582    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:53.761538    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:53.762493    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:53.763449    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:53.764423    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:53.765376    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:53.766299    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:53.766300    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:56.758903    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:56.759058    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:56.759071    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:56.760241    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:56.761211    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:56.762174    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:56.763136    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:56.764089    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:56.765045    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:56.766016    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:56.766988    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:56.767941    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:56.767944    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:35:59.748113    33 element_impl.hpp:199] creating element field : field
+I0417 17:35:59.748268    33 element_impl.hpp:199] creating element pid : field
+I0417 17:35:59.748282    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:35:59.749483    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:35:59.750468    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:35:59.751441    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:35:59.752403    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:35:59.753361    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:35:59.754307    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:35:59.755291    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:35:59.756232    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:35:59.757192    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:35:59.757194    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:02.789595    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:02.789754    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:02.789768    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:02.790978    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:02.791953    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:02.792927    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:02.793890    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:02.794852    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:02.795809    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:02.796765    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:02.797730    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:02.798671    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:02.798673    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:05.888209    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:05.888386    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:05.888401    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:05.889614    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:05.890601    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:05.891566    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:05.892519    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:05.893476    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:05.894444    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:05.895404    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:05.896339    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:05.897291    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:05.897293    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:08.972940    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:08.973096    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:08.973110    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:08.974292    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:08.975275    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:08.976243    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:08.977208    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:08.978171    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:08.979156    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:08.980113    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:08.981077    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:08.982009    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:08.982012    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:11.996575    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:11.996734    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:11.996748    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:11.997951    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:11.998939    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:11.999904    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:12.000876    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:12.001848    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:12.002905    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:12.003870    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:12.004848    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:12.005813    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:12.005816    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:15.030503    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:15.030658    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:15.030673    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:15.035254    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:15.036290    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:15.037262    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:15.038226    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:15.039182    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:15.040104    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:15.041033    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:15.041946    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:15.042930    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:15.042933    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:18.240089    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:18.240243    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:18.240257    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:18.241472    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:18.242457    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:18.243461    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:18.244460    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:18.245450    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:18.246402    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:18.247359    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:18.248286    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:18.249214    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:18.249217    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:20.759660    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:20.759819    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:20.759833    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:20.761031    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:20.762003    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:20.762970    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:20.763918    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:20.764879    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:20.765846    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:20.766805    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:20.767755    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:20.768715    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:20.768718    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:23.019115    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:23.019270    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:23.019284    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:23.020475    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:23.021456    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:23.022413    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:23.023365    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:23.024314    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:23.025274    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:23.026226    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:23.027216    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:23.028172    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:23.028173    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:25.411238    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:25.413213    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:25.413230    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:25.414513    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:25.415561    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:25.416528    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:25.417479    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:25.418424    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:25.419400    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:25.420372    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:25.421291    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:25.422199    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:25.422200    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:27.687804    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:27.687963    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:27.687976    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:27.689159    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:27.690129    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:27.691088    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:27.692030    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:27.693001    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:27.693943    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:27.694888    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:27.695837    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:27.696780    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:27.696782    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:29.993252    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:29.993427    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:29.993440    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:29.994655    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:29.995644    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:29.996618    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:29.997587    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:29.998561    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:29.999521    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:30.000463    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:30.001410    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:30.002372    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:30.002375    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:32.456820    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:32.456979    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:32.456992    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:32.458194    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:32.459158    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:32.460119    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:32.461086    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:32.462034    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:32.462983    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:32.463927    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:32.464864    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:32.465791    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:32.465793    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:35.003086    33 element_impl.hpp:199] creating element field : field
+I0417 17:36:35.003243    33 element_impl.hpp:199] creating element pid : field
+I0417 17:36:35.003257    33 element_impl.hpp:199] creating element solar_shading_coeff : u
+I0417 17:36:35.004452    33 element_impl.hpp:199] creating element Energy : u
+I0417 17:36:35.005424    33 element_impl.hpp:199] creating element PMV : u
+I0417 17:36:35.006392    33 element_impl.hpp:199] creating element PPD : u
+I0417 17:36:35.007371    33 element_impl.hpp:199] creating element QFlowCooling : u
+I0417 17:36:35.008311    33 element_impl.hpp:199] creating element QFlowHeating : u
+I0417 17:36:35.009264    33 element_impl.hpp:199] creating element temperature_ambiance : u
+I0417 17:36:35.010212    33 element_impl.hpp:199] creating element temperature_exterior : u
+I0417 17:36:35.011190    33 element_impl.hpp:199] creating element temperature_interior : u
+I0417 17:36:35.012113    33 exporterensightgold_impl.hpp:1376] ExporterEnsightGold::writeVariableFiles Nodal: 0
+I0417 17:36:35.012115    33 exporterensightgold_impl.hpp:1377] ExporterEnsightGold::writeVariableFiles Element: 10
+I0417 17:36:37.299572    33 environment.cpp:2423] Environment::clearSomeMemory before: PETSC get current memory usage (resident memory): 626897  KBytes 626.897  MBytes 0.626897 GBytes
+I0417 17:36:37.299585    33 environment.cpp:2428] Environment::clearSomeMemory before: PETSC get current PETSC Malloc usage: 0  KBytes 0 MBytes 0 GBytes
+I0417 17:36:37.299590    33 environment.cpp:2430] Environment::clearSomeMemory before: PETSC get maximum PETSC Malloc usage(largest memory ever used so far): 0  KBytes 0 MBytes 0 GBytes
+I0417 17:36:37.299736    33 environment.cpp:2423] Environment::clearSomeMemory after: PETSC get current memory usage (resident memory): 626897  KBytes 626.897  MBytes 0.626897 GBytes
+I0417 17:36:37.299741    33 environment.cpp:2428] Environment::clearSomeMemory after: PETSC get current PETSC Malloc usage: 0  KBytes 0 MBytes 0 GBytes
+I0417 17:36:37.299743    33 environment.cpp:2430] Environment::clearSomeMemory after: PETSC get maximum PETSC Malloc usage(largest memory ever used so far): 0  KBytes 0 MBytes 0 GBytes</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer" style="border-top: 2px solid #e9e9e9; background-color: #fafafa; padding-bottom: 2em; padding-top: 2em;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 0.5em;">
+        <div>
+            <a href="https://www.cemosis.fr">
+                <img src="../../../../../../_/img/cemosis-logo.svg" alt="Cemosis logo" height="50">
+            </a>
+        </div>
+        <span style="font-size: 0.8rem; color: #9e9e9e">© 2025 <a href="https://www.cemosis.fr" style="text-decoration: underline;">Cemosis</a>, Université de Strasbourg</span>
+    </div>
+</footer>
+<script id="site-script" src="../../../../../../_/js/site.js" data-ui-root-path="../../../../../../_"></script>
+
+
+<script async src="../../../../../../_/js/vendor/fontawesome-icon-defs.js"></script>
+<script async src="../../../../../../_/js/vendor/fontawesome.js"></script>
+<script async src="../../../../../../_/js/vendor/highlight.js"></script>
+
+
+<script type="text/javascript">
+function toggleFullScreen() {
+   var doc = window.document;
+   var docEl = doc.documentElement;
+
+   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+       requestFullScreen.call(docEl);
+   }
+   else {
+       cancelFullScreen.call(doc);
+   }
+}
+</script>
+  </body>
+</html>
